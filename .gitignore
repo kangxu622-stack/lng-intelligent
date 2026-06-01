@@ -47,6 +47,9 @@ pnpm-debug.log*
 *~
 .DS_Store
 
+# === Runtime config (contains secrets) ===
+**/llm_config.json
+
 # === Uploads / Runtime data ===
 **/uploads/*
 !**/uploads/.gitkeep

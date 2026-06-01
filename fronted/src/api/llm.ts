@@ -208,6 +208,30 @@ export const sendLlmMessageStream = async (
   }
 }
 
+export interface LlmConfig {
+  activeProvider: string
+  activeModel: string
+  hasApiKey: boolean
+  openAiBaseUrl: string
+  openAiModel: string
+}
+
+export interface UpdateLlmConfigRequest {
+  apiKey?: string
+  baseUrl?: string
+  model?: string
+}
+
+export const getLlmConfig = async () => {
+  const response = await http.get<ApiEnvelope<LlmConfig>>('/api/llm/config')
+  return response.data
+}
+
+export const updateLlmConfig = async (payload: UpdateLlmConfigRequest) => {
+  const response = await http.put<ApiEnvelope<null>>('/api/llm/config', payload)
+  return response.data
+}
+
 export const uploadFaultImage = async (file: File, userId: number, conversationCode?: string) => {
   const formData = new FormData()
   formData.append('file', file)

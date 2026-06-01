@@ -30,11 +30,14 @@ builder.Services.AddHttpClient<IPythonAlgorithmClient, PythonAlgorithmClient>(cl
     var baseUrl = builder.Configuration["PythonService:BaseUrl"] ?? "http://localhost:5000/";
     client.BaseAddress = new Uri(baseUrl);
 });
-builder.Services.AddHttpClient<IOllamaService, OllamaService>(client =>
+builder.Services.AddHttpClient<OllamaProvider>(client =>
 {
     var baseUrl = builder.Configuration["Ollama:BaseUrl"] ?? "http://localhost:11434/";
     client.BaseAddress = new Uri(baseUrl);
 });
+builder.Services.AddHttpClient<OpenAiProvider>();
+builder.Services.AddSingleton<LlmConfigManager>();
+builder.Services.AddScoped<LlmProviderSelector>();
 builder.Services.AddScoped<backend.Repositories.IAuthRepository, backend.Repositories.AuthRepository>();
 builder.Services.AddScoped<IAuthAppService, AuthAppService>();
 builder.Services.AddScoped<ILlmRepository, LlmRepository>();

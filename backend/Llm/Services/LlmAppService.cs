@@ -15,20 +15,20 @@ public sealed class LlmAppService : ILlmAppService
     ];
 
     private readonly ILlmRepository _llmRepository;
-    private readonly IOllamaService _ollamaService;
+    private readonly LlmProviderSelector _selector;
     private readonly IConfiguration _configuration;
     private readonly IWebHostEnvironment _environment;
     private readonly ILogger<LlmAppService> _logger;
 
     public LlmAppService(
         ILlmRepository llmRepository,
-        IOllamaService ollamaService,
+        LlmProviderSelector selector,
         IConfiguration configuration,
         IWebHostEnvironment environment,
         ILogger<LlmAppService> logger)
     {
         _llmRepository = llmRepository;
-        _ollamaService = ollamaService;
+        _selector = selector;
         _configuration = configuration;
         _environment = environment;
         _logger = logger;
@@ -179,7 +179,7 @@ public sealed class LlmAppService : ILlmAppService
         });
 
         var assistantContent = new StringBuilder();
-        string modelName = _configuration["Ollama:Model"] ?? "qwen2.5:7b";
+        string modelName = _selector.GetActiveModel();
         int? promptTokens = null;
         int? completionTokens = null;
         int? totalTokens = null;
@@ -482,7 +482,8 @@ public sealed class LlmAppService : ILlmAppService
         IReadOnlyCollection<long>? attachmentIds,
         CancellationToken cancellationToken)
     {
-        var model = _configuration["Ollama:Model"] ?? "qwen2.5:7b";
+        var provider = await _selector.SelectProviderAsync(cancellationToken);
+        var model = _selector.GetActiveModel();
         var systemPrompt = BuildSystemPrompt(bizType);
         var history = conversation.ConversationId > 0
             ? await _llmRepository.GetMessagesAsync(conversation.ConversationId, cancellationToken)
@@ -492,11 +493,11 @@ public sealed class LlmAppService : ILlmAppService
 
         try
         {
-            return await _ollamaService.ChatAsync(model, messages, cancellationToken);
+            return await provider.ChatAsync(model, messages, cancellationToken);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Failed to call Ollama for bizType {BizType}", bizType);
+            _logger.LogError(ex, "Failed to call LLM provider={Provider} for bizType={BizType}", _selector.GetActiveProvider(), bizType);
             return new OllamaChatResult
             {
                 Model = "fallback",
@@ -513,7 +514,8 @@ public sealed class LlmAppService : ILlmAppService
         IReadOnlyCollection<long>? attachmentIds,
         [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken cancellationToken)
     {
-        var model = _configuration["Ollama:Model"] ?? "qwen2.5:7b";
+        var provider = await _selector.SelectProviderAsync(cancellationToken);
+        var model = _selector.GetActiveModel();
         var systemPrompt = BuildSystemPrompt(bizType);
         var history = conversation.ConversationId > 0
             ? await _llmRepository.GetMessagesAsync(conversation.ConversationId, cancellationToken)
@@ -521,7 +523,7 @@ public sealed class LlmAppService : ILlmAppService
 
         var messages = BuildOllamaMessages(systemPrompt, history, content, bizType, attachmentIds);
 
-        await foreach (var chunk in _ollamaService.StreamChatAsync(model, messages, cancellationToken))
+        await foreach (var chunk in provider.StreamChatAsync(model, messages, cancellationToken))
         {
             yield return chunk;
         }
