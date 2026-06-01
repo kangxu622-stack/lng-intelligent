@@ -3,7 +3,10 @@
     <div class="llm-test-layout">
       <section class="control-panel">
         <div class="panel-head">
-          <h2>模型调用测试</h2>
+          <div class="panel-head-row">
+            <h2>模型调用测试</h2>
+            <el-button :icon="Setting" size="small" @click="settingsRef?.open()">模型设置</el-button>
+          </div>
           <p>用于验证前端、后端和 Ollama 服务之间的调用链是否正常。</p>
         </div>
 
@@ -96,6 +99,7 @@
         <ChatAnswerPanel :messages="messages" />
       </section>
     </div>
+    <LlmSettings ref="settingsRef" />
   </pagePanelNew>
 </template>
 
@@ -106,7 +110,9 @@ defineOptions({
 
 import { computed, ref } from 'vue'
 import { ElMessage } from 'element-plus'
+import { Setting } from '@element-plus/icons-vue'
 import ChatAnswerPanel, { type ChatMessageItem } from '../component/ChatAnswerPanel.vue'
+import LlmSettings from '../component/LlmSettings.vue'
 import { getCurrentUserId, sendLlmMessage, type LlmMessage } from '@/api/llm'
 
 type BizType = 'question' | 'fault-diagnosis' | 'scheme-explanation'
@@ -118,6 +124,7 @@ const bizType = ref<BizType>('question')
 const userId = ref(Math.max(getCurrentUserId(), 1))
 const prompt = ref(defaultPrompt)
 const running = ref(false)
+const settingsRef = ref<InstanceType<typeof LlmSettings> | null>(null)
 const status = ref<RunStatus>('idle')
 const errorMessage = ref('')
 const messages = ref<ChatMessageItem[]>([])
@@ -267,8 +274,15 @@ const runTest = async () => {
   gap: 16px;
 }
 
+.panel-head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
 .panel-head h2 {
-  margin: 0 0 8px;
+  margin: 0;
   color: #ffffff;
   font-size: 22px;
   font-weight: 600;

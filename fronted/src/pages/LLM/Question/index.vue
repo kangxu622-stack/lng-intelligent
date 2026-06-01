@@ -15,8 +15,6 @@
           <p class="intro-text">请输入 LNG 调度相关问题，系统会结合当前业务场景给出智能问答结果。</p>
         </cm-panel>
 
-        <el-button class="settings-btn" :icon="Setting" size="small" @click="settingsRef?.open()">模型设置</el-button>
-
         <ChatAnswerPanel :messages="messages" />
 
         <div class="quick-question-row">
@@ -53,7 +51,6 @@
       </section>
     </div>
 
-    <LlmSettings ref="settingsRef" />
   </pagePanelNew>
 </template>
 
@@ -64,10 +61,9 @@ defineOptions({
 
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
-import { ArrowRight, Promotion, Setting } from '@element-plus/icons-vue'
+import { ArrowRight, Promotion } from '@element-plus/icons-vue'
 import ChatAnswerPanel, { type ChatMessageItem } from '../component/ChatAnswerPanel.vue'
 import SessionSidebar, { type SessionConversationItem } from '../component/SessionSidebar.vue'
-import LlmSettings from '../component/LlmSettings.vue'
 import {
   getCurrentUserId,
   deleteLlmConversation,
@@ -90,7 +86,6 @@ const inputValue = ref('')
 const userId = ref(0)
 const sending = ref(false)
 const streamController = ref<AbortController | null>(null)
-const settingsRef = ref<InstanceType<typeof LlmSettings> | null>(null)
 
 const initialMessages = (): ChatMessageItem[] => [
   {
@@ -352,13 +347,6 @@ onBeforeUnmount(() => {
   height: 45px;
   display: flex;
   align-items: center;
-}
-
-.settings-btn {
-  position: fixed;
-  top: 76px;
-  right: 24px;
-  z-index: 1000;
 }
 
 .intro-text {
