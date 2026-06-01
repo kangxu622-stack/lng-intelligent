@@ -13,8 +13,9 @@
       <section class="question-main">
         <cm-panel class="intro-panel" style="height: 45px;">
           <p class="intro-text">请输入 LNG 调度相关问题，系统会结合当前业务场景给出智能问答结果。</p>
-          <el-button class="settings-btn" :icon="Setting" size="small" @click="settingsRef?.open()">设置</el-button>
         </cm-panel>
+
+        <el-button class="settings-btn" :icon="Setting" size="small" @click="settingsRef?.open()">模型设置</el-button>
 
         <ChatAnswerPanel :messages="messages" />
 
@@ -351,11 +352,13 @@ onBeforeUnmount(() => {
   height: 45px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .settings-btn {
-  flex-shrink: 0;
+  position: fixed;
+  top: 76px;
+  right: 24px;
+  z-index: 1000;
 }
 
 .intro-text {
