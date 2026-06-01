@@ -1,6 +1,6 @@
-using backend.Entities;
+using backend.Llm.Entities;
 
-namespace backend.Repositories;
+namespace backend.Llm.Repositories;
 
 public interface ILlmRepository
 {

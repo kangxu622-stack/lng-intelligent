@@ -1,7 +1,7 @@
-using backend.Entities;
+using backend.Llm.Entities;
 using MySqlConnector;
 
-namespace backend.Repositories;
+namespace backend.Llm.Repositories;
 
 public sealed class LlmRepository : ILlmRepository
 {

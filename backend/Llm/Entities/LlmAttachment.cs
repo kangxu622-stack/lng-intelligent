@@ -1,4 +1,4 @@
-namespace backend.Entities;
+namespace backend.Llm.Entities;
 
 public sealed class LlmAttachment
 {

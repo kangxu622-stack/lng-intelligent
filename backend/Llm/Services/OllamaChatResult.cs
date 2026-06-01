@@ -1,4 +1,4 @@
-namespace backend.Services;
+namespace backend.Llm.Services;
 
 public sealed class OllamaChatResult
 {

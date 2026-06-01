@@ -1,6 +1,8 @@
 using backend.Services;
 using backend.Repositories;
-using backend.Hubs; 
+using backend.Llm.Services;
+using backend.Llm.Repositories;
+using backend.Hubs;
 using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,7 +37,7 @@ builder.Services.AddHttpClient<IOllamaService, OllamaService>(client =>
 });
 builder.Services.AddScoped<backend.Repositories.IAuthRepository, backend.Repositories.AuthRepository>();
 builder.Services.AddScoped<IAuthAppService, AuthAppService>();
-builder.Services.AddScoped<backend.Repositories.ILlmRepository, backend.Repositories.LlmRepository>();
+builder.Services.AddScoped<ILlmRepository, LlmRepository>();
 builder.Services.AddScoped<ILlmAppService, LlmAppService>();
 builder.Services.AddScoped<backend.Repositories.IParameterRepository, backend.Repositories.ParameterRepository>();
 builder.Services.AddScoped<IParameterQueryService, ParameterQueryService>();

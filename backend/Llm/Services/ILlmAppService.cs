@@ -1,6 +1,6 @@
-using backend.Dtos.Llm;
+using backend.Llm.Dtos;
 
-namespace backend.Services;
+namespace backend.Llm.Services;
 
 public interface ILlmAppService
 {

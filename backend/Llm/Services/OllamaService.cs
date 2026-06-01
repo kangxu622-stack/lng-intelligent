@@ -3,7 +3,7 @@ using System.Net.Http.Json;
 using System.Runtime.CompilerServices;
 using System.Text.Json.Serialization;
 
-namespace backend.Services;
+namespace backend.Llm.Services;
 
 public sealed class OllamaService : IOllamaService
 {

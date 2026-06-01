@@ -1,11 +1,11 @@
 using backend.Dtos;
-using backend.Dtos.Llm;
-using backend.Services;
+using backend.Llm.Dtos;
+using backend.Llm.Services;
 using Microsoft.AspNetCore.Mvc;
 using MySqlConnector;
 using System.Text.Json;
 
-namespace backend.Controllers;
+namespace backend.Llm.Controllers;
 
 [ApiController]
 [Route("api/llm")]

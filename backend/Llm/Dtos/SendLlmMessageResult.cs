@@ -1,4 +1,4 @@
-namespace backend.Dtos.Llm;
+namespace backend.Llm.Dtos;
 
 public sealed class SendLlmMessageResult
 {

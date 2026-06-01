@@ -1,9 +1,9 @@
-using backend.Dtos.Llm;
-using backend.Entities;
-using backend.Repositories;
+using backend.Llm.Dtos;
+using backend.Llm.Entities;
+using backend.Llm.Repositories;
 using System.Text;
 
-namespace backend.Services;
+namespace backend.Llm.Services;
 
 public sealed class LlmAppService : ILlmAppService
 {
