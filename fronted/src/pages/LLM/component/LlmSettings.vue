@@ -21,7 +21,7 @@
           />
         </el-form-item>
         <el-form-item label="API 地址">
-          <el-input v-model="form.baseUrl" placeholder="https://api.openai.com/v1" />
+          <el-input v-model="form.baseUrl" placeholder="https://api.deepseek.com/v1" />
         </el-form-item>
         <el-form-item label="模型名称">
           <el-input v-model="form.model" placeholder="deepseek-chat" />
@@ -72,7 +72,7 @@ const loadConfig = async () => {
   try {
     const res = await getLlmConfig()
     Object.assign(config, res.data)
-    form.baseUrl = res.data.openAiBaseUrl || 'https://api.openai.com/v1'
+    form.baseUrl = res.data.openAiBaseUrl || 'https://api.deepseek.com/v1'
     form.model = res.data.openAiModel || 'deepseek-chat'
     form.apiKey = ''
   } catch {

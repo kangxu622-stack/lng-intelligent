@@ -20,7 +20,7 @@ public sealed class LlmConfigManager
         if (string.IsNullOrWhiteSpace(ApiKey))
             ApiKey = configuration["Llm:OpenAI:ApiKey"];
         if (string.IsNullOrWhiteSpace(BaseUrl))
-            BaseUrl = configuration["Llm:OpenAI:BaseUrl"] ?? "https://api.openai.com/v1/";
+            BaseUrl = configuration["Llm:OpenAI:BaseUrl"] ?? "https://api.deepseek.com/v1/";
         if (string.IsNullOrWhiteSpace(Model))
             Model = configuration["Llm:OpenAI:Model"] ?? "deepseek-chat";
     }
@@ -40,7 +40,7 @@ public sealed class LlmConfigManager
             if (input.ApiKey != null)
                 ApiKey = string.IsNullOrWhiteSpace(input.ApiKey) ? null : input.ApiKey.Trim();
             if (input.BaseUrl != null)
-                BaseUrl = string.IsNullOrWhiteSpace(input.BaseUrl) ? "https://api.openai.com/v1/" : input.BaseUrl.Trim();
+                BaseUrl = string.IsNullOrWhiteSpace(input.BaseUrl) ? "https://api.deepseek.com/v1/" : input.BaseUrl.Trim();
             if (input.Model != null)
                 Model = string.IsNullOrWhiteSpace(input.Model) ? "deepseek-chat" : input.Model.Trim();
         }

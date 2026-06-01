@@ -27,7 +27,7 @@ public sealed class LlmConfigController : ControllerBase
             ActiveProvider = _selector.GetActiveProvider(),
             ActiveModel = _selector.GetActiveModel(),
             HasApiKey = !string.IsNullOrWhiteSpace(config.ApiKey),
-            OpenAiBaseUrl = config.BaseUrl ?? "https://api.openai.com/v1/",
+            OpenAiBaseUrl = config.BaseUrl ?? "https://api.deepseek.com/v1/",
             OpenAiModel = config.Model ?? "deepseek-chat"
         }));
     }

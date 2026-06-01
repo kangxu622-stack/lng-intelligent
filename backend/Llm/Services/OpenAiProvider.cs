@@ -30,7 +30,7 @@ public sealed class OpenAiProvider : ILlmProvider
     private string GetBaseUrl()
     {
         var (_, baseUrl, _) = _configManager.GetConfig();
-        return (baseUrl ?? "https://api.openai.com/v1/").TrimEnd('/');
+        return (baseUrl ?? "https://api.deepseek.com/v1/").TrimEnd('/');
     }
 
     private string GetModel()
