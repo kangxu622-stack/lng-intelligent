@@ -1,0 +1,212 @@
+.vxe-table {
+  z-index: 0;
+
+  .vxe-table--header-wrapper {
+    color: rgba(255, 255, 255, 1);
+
+    .vxe-table--header-border-line {
+      border-bottom: 1px solid rgb(15, 94, 117, 1);
+    }
+  }
+
+  &.border--default,
+  &.border--full,
+  &.border--outer {
+    .vxe-table--header-wrapper {
+      background-color: transparent;
+    }
+  }
+}
+
+.vxe-toolbar {
+  background-color: transparent;
+}
+
+.vxe-table--render-default {
+  color: rgba(255, 255, 255, 0.7);
+
+  .vxe-table--body-wrapper {
+    background-color: transparent;
+  }
+
+  .vxe-header--column.col--ellipsis {
+    height: 34px;
+  }
+
+  .vxe-body--row {
+    &.row--stripe {
+      background-color: rgba(0, 222, 240, 0.2);
+    }
+
+    &.row--radio {
+      background-color: rgba(0, 222, 240, 0.2);
+    }
+
+    &.row--checked {
+      background-color: rgba(0, 222, 240, 0.2);
+    }
+
+    &.row--current {
+      background-color: rgba(0, 222, 240, 0.2);
+    }
+
+    &.row--hover {
+      background-color: rgba(0, 222, 240, 0.2);
+
+      &.row--stripe {
+        background-color: rgba(0, 222, 240, 0.2);
+      }
+
+      &.row--radio {
+        background-color: rgba(0, 222, 240, 0.2);
+      }
+
+      &.row--checked {
+        background-color: rgba(0, 222, 240, 0.2);
+      }
+
+      &.row--current {
+        background-color: rgba(0, 222, 240, 0.2);
+      }
+    }
+  }
+
+  &.border--default,
+  &.border--full,
+  &.border--outer {
+    .vxe-table--header-wrapper {
+      background: linear-gradient(360deg, #004473 0%, rgba(0, 72, 122, 0.36) 100%);
+    }
+  }
+
+  &.border--default,
+  &.border--inner {
+    .vxe-header--column,
+    .vxe-body--column,
+    .vxe-footer--column {
+      background-image: linear-gradient(rgba(36, 222, 255, 0.3), rgba(36, 222, 255, 0.3));
+    }
+  }
+
+  &.border--full {
+    .vxe-header--column,
+    .vxe-body--column,
+    .vxe-footer--column {
+      background-image: linear-gradient(rgba(36, 222, 255, 0.3), rgba(36, 222, 255, 0.3));
+    }
+  }
+
+  /* 边框线 */
+
+  .vxe-table--border-line {
+    border: 0 solid rgba(15, 94, 117, 1);
+  }
+
+  &.vxe-cell--radio,
+  &.vxe--radio--icon {
+    color: rgba(15, 94, 117, 1);
+  }
+}
+
+.vxe-input--inner {
+  color: rgba(0, 222, 240, 1);
+  background-color: #031527;
+  box-shadow: none;
+
+  &[disabled] {
+    background-color: rgba(51, 69, 86, 0.8);
+  }
+}
+
+.vxe-pulldown {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.vxe-pulldown--panel {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.vxe-pulldown--wrapper {
+  background-color: rgba(3, 21, 39, 1);
+}
+
+.vxe-modal--body {
+  background-color: rgba(3, 21, 39, 1);
+}
+
+.vxe-modal--header {
+  background: linear-gradient(to right, rgba(2, 30, 54, 0.2), rgba(0, 144, 188, 0.8));
+}
+
+.vxe-modal--header-title {
+  color: rgba(3, 21, 39, 1);
+}
+
+.el-tree--highlight-current .el-tree-node.is-current > .el-tree-node__content {
+  background-color: rgba(0, 144, 188, 0.8);
+}
+
+.vxe-select-option:not(.is--disabled).is--hover {
+  background: linear-gradient(to right, rgba(2, 30, 54, 0.2), rgba(0, 144, 188, 0.8));
+}
+
+.vxe-select-option--wrapper {
+  background-color: rgba(21, 43, 62, 1);
+}
+
+.vxe-modal--footer {
+  background-color: rgba(3, 21, 39, 1);
+}
+
+.vxe-button {
+  color: rgba(0, 222, 240, 1);
+  background-color: transparent;
+
+  &.type--text {
+    border: 0;
+  }
+}
+
+.vxe-loading {
+  background-color: transparent;
+}
+
+.vxe-select--panel {
+  color: rgba(185, 192, 197, 1);
+}
+
+.vxe-table--filter-wrapper {
+  &.filter--prevent-default {
+    &.is--animat.is--multiple.is--active {
+      background-color: rgb(21, 43, 62);
+      border: 0;
+    }
+
+    .vxe-table--filter-template {
+      input {
+        background-color: rgb(2, 61, 79);
+        color: rgb(0, 187, 202);
+        border-radius: 2px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+      }
+
+      input:focus {
+        background-color: rgb(2, 61, 79);
+        box-shadow: inset 0 2px 4px rgb(2, 61, 79);
+        border: 1px solid rgba(64, 158, 255, 1);
+      }
+
+      :focus-visible {
+        outline: 0;
+      }
+    }
+
+    .vxe-table--filter-footer {
+      border-top: 0;
+
+      button {
+        color: rgba(185, 192, 197, 1);
+      }
+    }
+  }
+}

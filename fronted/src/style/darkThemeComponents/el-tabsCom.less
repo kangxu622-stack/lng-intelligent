@@ -1,0 +1,90 @@
+// .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+//     background: var(--primary-btn);;
+//     font-size: 14px;
+//     font-weight: 600;
+//     color: #FFFFFF;
+// }
+
+// .el-tabs__item {
+//     border: 1px solid var(--light-blue-color) !important;
+//     font-weight: 600;
+//     font-size: 14px;
+//     color: var(--light-blue-color);
+//     background: transparent;
+// }
+// .el-tabs--card>.el-tabs__header {
+//     border-bottom: none;
+// }
+// .el-tabs--card>.el-tabs__header .el-tabs__nav{
+//     border: none;
+// }
+.g-pageHeader .el-tabs__nav {
+  //   border: 2px solid rgba(112, 112, 112, 1);
+  //   background: linear-gradient(to right, rgba(36, 222, 255, 0.3), transparent, transparent);
+  //TODO: Maybe change back
+  //background-image: url("../../assets/intelligentOilfield/title.png");
+  //background-repeat: no-repeat;
+  //   background-size: 100% 100%;
+  // width: 100%;
+  height: 100%;
+  // background-image: var(--logo-bg) !important;
+  background-size: unset !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+  z-index: 0;
+}
+
+.g-pageHeader .el-tabs__active-bar {
+  background-color: rgba(0, 222, 240, 1);
+}
+
+.g-pageHeader .el-tabs__item:hover {
+  color: var(--light-blue-color);
+}
+
+.g-pageHeader .el-tabs__item.is-active {
+  color: rgba(0, 222, 240, 1);
+}
+
+.g-pageHeader .el-tabs__item {
+  color: rgba(255, 255, 255, 0.45);
+  height: 100%;
+  line-height: 32px;
+}
+
+.g-pageHeader .el-tabs__nav-scroll {
+  height: 32px;
+}
+
+.g-pageHeader .el-tabs__nav-wrap::after {
+  height: 0;
+}
+
+.pageHeader {
+  border-bottom: 2px solid #00def0;
+  padding-bottom: 5px;
+  color: #00def0;
+  width: fit-content;
+  height: 32px;
+  line-height: 32px;
+  margin-left: 40px;
+}
+
+.el-tabs__nav-wrap {
+  .el-icon-arrow-left::before {
+    content: "\e792";
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .el-icon-arrow-right::before {
+    content: "\e791";
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .el-tabs__nav-next,
+  .el-tabs__nav-prev {
+    margin-top: -5px;
+  }
+}

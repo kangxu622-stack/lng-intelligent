@@ -1,0 +1,29 @@
+.list-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  .el-form-item {
+    min-width: 200px;
+    margin-right: 10px;
+    display: flex;
+
+    ::v-deep .el-form-item__label {
+      line-height: 36px;
+
+      &::after {
+        content: "：";
+      }
+    }
+  }
+
+  .search-button {
+    margin: 0 10px;
+  }
+}
+
+// 列表页非表格的内容页面高度
+.list-height {
+  height: calc(100% - 56px);
+  overflow-y: scroll;
+}

@@ -1,0 +1,57 @@
+# === .NET Backend ===
+**/bin
+**/obj
+**/.vs
+**/packages
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+appsettings.*.json
+!appsettings.Example.json
+**/build-temp
+**/build-verify
+**/TestResults
+**/publish
+
+# === Node.js Frontend ===
+node_modules
+dist
+dist-ssr
+*.local
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+*.egg
+
+# === Logs ===
+*.log
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === IDE / Editor ===
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# === Uploads / Runtime data ===
+**/uploads/*
+!**/uploads/.gitkeep
+
+# === OS ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini

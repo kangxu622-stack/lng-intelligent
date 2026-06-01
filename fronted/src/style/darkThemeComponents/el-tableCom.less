@@ -1,0 +1,374 @@
+.el-table tr {
+  background: transparent;
+  color: var(--white-opacity7);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.el-table__body tr.current-row > td.el-table__cell {
+  background: var(--opacity-blue-bg) !important;
+}
+
+.el-table {
+  background: transparent;
+  // 覆盖 Element Plus 表格边框颜色 CSS 变量
+  --el-table-border-color: var(--opacity-blue-bg);
+}
+
+.el-table .cell {
+  height: 40px;
+  line-height: 40px;
+}
+
+.table_header {
+  color: var(--light-blue-color);
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  // height: 40px;
+}
+
+.el-table tbody tr:hover > td {
+  background: var(--opacity-blue-bg) !important;
+}
+
+.el-table th.el-table__cell,
+.el-table th.el-table__cell.is-leaf {
+  //   background: linear-gradient(360deg, #004473 0%, rgba(0, 72, 122, 0.36) 100%) !important;
+}
+
+.el-table td.el-table__cell,
+.el-table th.el-table__cell.is-leaf {
+  border-bottom: 1px solid var(--opacity-blue-bg);
+}
+
+//
+.el-table__footer-wrapper td.el-table__cell {
+  border-top: 1px solid var(--opacity-blue-bg);
+}
+
+.el-table .el-table__footer-wrapper th.el-table__cell,
+.el-table .el-table__footer-wrapper th.el-table__cell.is-leaf {
+  background: unset !important;
+}
+
+.el-table__fixed-footer-wrapper tbody td.el-table__cell {
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 0 solid transparent;
+}
+
+.el-table tbody tr:last-child {
+  border: 0;
+}
+
+// 滚动条的宽度
+.el-table__body-wrapper::-webkit-scrollbar {
+  width: 10px; // 横向滚动条
+  height: 10px; // 纵向滚动条 必写
+}
+
+// header右侧固定白线
+.el-table__fixed-right-patch {
+  // width: 0 !important;
+  width: 11px !important;
+  background: #02355e;
+}
+
+.el-table__fixed-right {
+  // right: 10px !important;
+}
+
+// 滚动条的滑块
+.el-table__body-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--opacity-blue-bg);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.el-table .el-table__cell.gutter {
+  background: transparent;
+}
+// 表头显示双行（带单位）
+.doubleHeader .el-table__header-wrapper {
+  .cell {
+    height: auto !important;
+  }
+}
+
+.twoRowHeader {
+  height: auto !important;
+
+  .sort-caret.descending {
+    bottom: -6px !important;
+  }
+
+  .sort-caret.ascending {
+    top: 18px !important;
+  }
+}
+
+.headerSortRow1 {
+  max-width: calc(100% - 24px);
+  display: inline-table;
+  text-align: center;
+}
+//表头
+.el-table__header-wrapper {
+  // background-image: var(--logo-bg) !important;
+  background-size: unset !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+
+  .el-table__header {
+    background: linear-gradient(360deg, #004473 0%, rgba(0, 72, 122, 0.36) 100%) !important;
+  }
+
+  .cell {
+    background: transparent;
+    color: #fff;
+    height: 34px;
+    line-height: 34px;
+  }
+}
+
+.el-table::before {
+  display: none;
+}
+
+.headerStyle {
+  height: 32px;
+  width: 100%;
+  line-height: 32px;
+  font-size: 16px;
+  color: var(--white-color);
+  padding: 0 0 0 20px;
+}
+
+.infoHeaderBg {
+  background: var(--logo-bg) no-repeat top right,
+    linear-gradient(to right, rgba(0, 202, 255, 0.4), var(--opacity-blue-bg2)) !important;
+}
+
+.footerBox {
+  width: 100%;
+  margin: 20px 0 0;
+  height: calc(100% - 125px);
+  position: relative;
+  border: 1px solid #ddd;
+  border-image: linear-gradient(180deg, #2e5b7c, #01aaf2) 3 3;
+  background: linear-gradient(360deg, rgba(0, 68, 115, 0.64) 0%, rgba(0, 72, 122, 0.16) 100%) !important;
+  box-shadow: unset;
+}
+
+.panelBox {
+  height: calc(100% - 76px);
+  width: 100%;
+  border: 1px solid #ddd;
+  border-image: linear-gradient(180deg, #2e5b7c, #01aaf2) 3 3;
+  // background: linear-gradient(360deg, rgba(0, 68, 115, 0.64) 0%, rgba(0, 72, 122, 0.16) 100%) !important;
+  box-shadow: unset;
+  background: var(--logo-bg) no-repeat top right,
+    linear-gradient(360deg, rgba(0, 68, 115, 0.64) 0%, rgba(0, 72, 122, 0.16) 100%) !important;
+}
+.panelBoxFull {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-image: linear-gradient(180deg, #2e5b7c, #01aaf2) 3 3;
+  // background: linear-gradient(360deg, rgba(0, 68, 115, 0.64) 0%, rgba(0, 72, 122, 0.16) 100%) !important;
+  box-shadow: unset;
+  background: var(--logo-bg) no-repeat top right,
+    linear-gradient(360deg, rgba(0, 68, 115, 0.64) 0%, rgba(0, 72, 122, 0.16) 100%) !important;
+}
+.maxDivBox {
+  background: var(--logo-bg) no-repeat top right, transparent !important;
+}
+
+.right {
+  height: calc(100vh - 145px);
+}
+
+.el-tag {
+  border: 1px solid var(--light-blue-color);
+  color: var(--light-blue-color);
+  background: var(--opacity-blue-bg);
+  font-size: 14px;
+}
+
+.el-tag.el-tag--danger {
+  background-color: rgba(255, 49, 65, 0.2);
+  border-color: #ff4d4f;
+  color: #ff4d4f;
+}
+
+.el-table .descending .sort-caret.descending {
+  border-top-color: var(--light-blue-color);
+}
+
+.el-table .ascending .sort-caret.ascending {
+  border-bottom-color: var(--light-blue-color);
+}
+
+.el-table .sort-caret.ascending {
+  border-bottom-color: gray;
+}
+
+.el-table .sort-caret.descending {
+  border-top-color: gray;
+}
+
+.el-table thead.is-group th.el-table__cell {
+  background: transparent;
+}
+
+.el-table--border .el-table__cell,
+.el-table__body-wrapper .el-table--border.is-scrolling-left ~ .el-table__fixed {
+  border-right: 1px solid var(--opacity-blue-bg) !important;
+}
+
+.el-table--border th.el-table__cell,
+.el-table__fixed-right-patch {
+  border-bottom: 1px solid var(--opacity-blue-bg) !important;
+}
+
+// 确保所有单元格边框都使用自定义颜色
+.el-table--border td.el-table__cell {
+  border-right: 1px solid var(--opacity-blue-bg) !important;
+  border-bottom: 1px solid var(--opacity-blue-bg) !important;
+}
+
+.el-table--border,
+.el-table--group {
+  border: 1px solid var(--opacity-blue-bg) !important;
+}
+
+.el-table--border::after,
+.el-table--group::after,
+.el-table::before {
+  background-color: var(--opacity-blue-bg);
+}
+
+.tablestyle {
+  .el-table__row {
+    line-height: 20px;
+    font-family: PingFangSC-Regular, "PingFang SC";
+  }
+}
+
+.el-table__cell {
+  padding: 0 !important;
+}
+
+.el-table__fixed-right::before,
+.el-table__fixed::before {
+  height: 0;
+}
+
+//固定的表头表尾背景色
+.el-table__fixed-right,
+.el-table__fixed {
+  height: calc(100% - 10px) !important;
+  background: #02355e;
+  box-shadow: 0 -13px 19px 3px #2c5a7b;
+}
+
+.el-table__fixed-right td:hover,
+.el-table tbody tr td {
+  background-color: transparent !important;
+}
+
+//划过某行，表头表尾背景色
+.el-table__fixed-right .hover-row,
+.el-table__fixed .hover-row {
+  background: var(--opacity-blue-bg) !important;
+}
+
+// 该样式用于修复在暗色模式下使用带有固定列的elementui的表格时出现的鼠标移入固定列后该行样式未全部改变的bug
+.el-table__body tr.hover-row > td.el-table__cell {
+  background: var(--opacity-blue-bg) !important;
+}
+
+.el-table__fixed-header-wrapper {
+  background: transparent;
+  // background-image: var(--logo-bg) !important;
+  background-size: unset !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+
+  .cell {
+    height: 34px;
+    line-height: 34px;
+  }
+}
+
+.t-layout {
+  background-image: url("@/assets/backgroundImg.png");
+}
+
+.el-table--enable-row-transition .el-table__body td.el-table__cell {
+  transition: background-color 0s ease;
+}
+
+.el-table-filter {
+  border: 1px solid #1b5782;
+  background: var(--drop-down-color);
+}
+
+.el-table-filter__bottom {
+  border-top: 1px solid #1b5782;
+}
+
+.el-table-filter__bottom button {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.el-table-filter__bottom button.is-disabled,
+.el-table-filter__bottom button.is-disabled:hover {
+  color: #606266;
+}
+
+.el-table-filter__bottom button:hover {
+  color: var(--light-blue-color);
+}
+
+.filterTable {
+  .el-icon-arrow-down {
+    background-image: url("@/assets/intelligentOilfield/loudou-dark.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 14px;
+    height: 12px;
+    transform: none;
+    line-height: 1;
+  }
+
+  .el-icon-arrow-down::before {
+    color: transparent;
+  }
+}
+
+.el-table--border th.gutter:last-of-type {
+  display: block !important;
+  width: 17px !important;
+  border: 1px solid transparent !important;
+}
+
+.el-table__body-wrapper.is-scrolling-none ~ .el-table__fixed-right {
+  right: 0 !important;
+  height: 100% !important;
+  bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+// 表格只有纵向滚动条
+.el-table--scrollable-y .el-table__fixed-right {
+  right: 10px !important;
+}
+
+// 表格只有横向没有纵向
+.el-table--scrollable-x:not(.el-table--scrollable-y) .el-table__fixed-right {
+  right: 0 !important;
+}

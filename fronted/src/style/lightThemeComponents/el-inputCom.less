@@ -1,0 +1,124 @@
+.el-form-item__content {
+  line-height: 34px;
+}
+
+.el-input-number.is-controls-right .el-input-number__decrease,
+.el-input-number.is-controls-right .el-input-number__increase {
+  //TODO: Maybe change back UI调整
+  line-height: 17px;
+}
+
+.el-input-number {
+  //TODO: Maybe change back UI调整
+  line-height: 32px;
+}
+
+.el-form-item__label {
+  //TODO: Maybe change back UI调整
+  line-height: 34px;
+}
+
+.el-form-item {
+  //TODO: Maybe change back UI调整
+  margin-bottom: 18px;
+}
+
+.el-input__inner,
+.el-input__inner:hover,
+.el-input__inner:focus {
+  border: 1px solid var(--light-blue-color);
+  border-radius: 0;
+  color: var(--light-blue-color);
+  // background-image: var(--logo-bg) !important;
+  background-size: unset !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+}
+
+.el-input__inner {
+  //TODO: Maybe change back UI调整
+  height: 34px;
+}
+
+.el-input__icon {
+  //TODO: Maybe change back UI调整
+  line-height: 34px;
+}
+
+.el-form-item__content,
+.left {
+  .el-input__inner {
+    //TODO: Maybe change back UI调整
+    //height: 40px;
+    height: 34px;
+  }
+}
+
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: var(--light-blue-color);
+}
+
+.el-input.is-disabled .el-input__inner {
+  color: rgba(207, 207, 207, 1);
+  background: rgba(245, 245, 245, 1);
+  border: 1px solid #c0c4cc;
+  // background-image: var(--logo-bg) !important;
+  background-size: unset !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+}
+
+.el-textarea.is-disabled .el-textarea__inner {
+  color: rgba(207, 207, 207, 1);
+  background: rgba(245, 245, 245, 1);
+  border: 1px solid #c0c4cc;
+  // background-image: var(--logo-bg) !important;
+  background-size: 100% 100% !important;
+}
+
+.el-autocomplete-suggestion {
+  background: #fff;
+  border: none;
+}
+
+.el-autocomplete-suggestion li {
+  color: #606266;
+}
+
+.el-autocomplete-suggestion li:hover {
+  background-color: #f5f7fa;
+}
+
+.noBorderBlueBg {
+  input {
+    border: none !important;
+  }
+
+  .el-input__inner {
+    background: rgba(81, 161, 255, 0.1);
+    border-radius: 2px;
+    // background-image: var(--logo-bg) !important;
+    background-size: unset !important;
+    background-repeat: no-repeat !important;
+    background-position: right top !important;
+    color: #51a1ff;
+  }
+
+  .el-icon-search::before {
+    color: #51a1ff;
+  }
+
+  .el-input__inner::placeholder {
+    color: #51a1ff !important;
+  }
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
+input::-webkit-outer-spin-button{
+  appearance: none !important;
+}
+input[type="number"]{
+  appearance: textfield;
+}

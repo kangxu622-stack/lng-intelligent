@@ -1,0 +1,73 @@
+// .el-transfer-panel {
+//   background: transparent;
+//   border: 1px solid gray;
+// }
+// .el-transfer-panel .el-transfer-panel__header {
+//   background: transparent;
+//   border-bottom: 1px solid gray;
+// }
+// .el-transfer-panel .el-transfer-panel__header .el-checkbox .el-checkbox__label {
+//   color: var(--white-color);
+// }
+// .el-transfer-panel .el-transfer-panel__header .el-checkbox .el-checkbox__label span {
+//   color: var(--white-color);
+// }
+
+// .el-checkbox__input.is-disabled + span.el-checkbox__label {
+//   color: rgba(66, 79, 93, 1);
+// }
+// .el-checkbox__input.is-disabled .el-checkbox__inner {
+//   background-color: rgba(33, 39, 56, 1);
+//   border-color: rgba(66, 79, 93, 1);
+// }
+// .el-transfer__button {
+//   background: rgba(23, 125, 220, 1);
+//   // width: 40px;
+//   // height: 40px;
+//   border-radius: 4px;
+// }
+
+// 如果是整个页面的滚动条风格是一致的，直接改全局的滚动条样式也可以有效果
+//滚动条的宽度
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+//滚动条的滑块
+::-webkit-scrollbar-thumb {
+  background-color: #a1a3a9;
+  border-radius: 3px;
+}
+
+.el-transfer-panel__list {
+  .el-checkbox {
+    margin-right: 0;
+  }
+
+  .is-checked {
+    background: #ccdfed;
+
+    .el-checkbox__label {
+      color: #606266;
+    }
+
+    .el-checkbox__inner {
+      background-color: var(--only-light-blue-color);
+      border-color: var(--only-light-blue-color);
+    }
+  }
+}
+
+.el-transfer-panel__item:hover {
+  color: var(--only-light-blue-color);
+}
+
+.el-checkbox__input.is-focus .el-checkbox__inner {
+  border-color: #dcdfe6;
+}
+
+.el-transfer__button.is-disabled,
+.el-transfer__button.is-disabled:hover {
+  border: unset;
+}

@@ -1,0 +1,153 @@
+.el-dialog {
+  // clip-path: polygon(20px 0, calc(100% - 20px) 0,
+  //         100% 0, 100% calc(100% - 20px),
+  //         calc(100% - 20px) 100%, 20px 100%,
+  //         0 calc(100%), 0 20px);
+  background: #fff !important;
+  margin: 0 auto !important;
+  // background-image: var(--logo-bg) !important;
+  background-size: unset !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+}
+
+.el-dialog__title {
+  color: #fff;
+  font-size: 14px;
+}
+
+.el-dialog__header {
+  background: linear-gradient(to right, rgba(0, 96, 166, 1), rgba(0, 96, 166, 0.2));
+  padding: 10px 20px;
+
+  .el-dialog__headerbtn {
+    top: 14px;
+  }
+
+  .el-icon-close::before {
+    color: #fff;
+  }
+}
+
+.el-dialog__body {
+  color: #000;
+  // border: 1px solid var(--light-blue-color);
+  text-align: left;
+  padding: 0 10px;
+  margin: 20px;
+}
+
+.addwork {
+  .el-form-item__content {
+    margin-left: 0 !important;
+  }
+}
+
+.headerinfo {
+  width: 25%;
+  border-bottom: 1px solid rgb(0, 96, 166);
+  padding: 10px 0;
+  margin-bottom: 10px;
+  color: rgb(0, 96, 166);
+}
+
+.el-upload {
+  width: 100%;
+  margin-top: 10px;
+
+  .el-upload-dragger {
+    width: 100%;
+    // background-image: var(--logo-bg) !important;
+    background-size: unset !important;
+    background-repeat: no-repeat !important;
+    background-position: right top !important;
+  }
+}
+
+.el-dialog__footer {
+  .el-button {
+    padding: 0 16px;
+  }
+}
+
+.el-dialog__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.import-dialog {
+  height: 80%;
+
+  .el-dialog__body {
+    height: calc(100% - 84px);
+  }
+}
+
+.land-dialog {
+  height: 80vh;
+
+  .el-dialog__body {
+    height: calc(100% - 155px);
+  }
+}
+
+.el-loading-mask {
+  z-index: 3000 !important;
+}
+
+.portalDialog {
+  .blueDiv {
+    background: rgba(0, 117, 233, 0.15);
+
+    .contentText {
+      color: #606266;
+    }
+  }
+
+  .el-dialog__header {
+    background: #0075e9;
+  }
+
+  .el-dialog__body {
+    padding: 20px;
+    margin: 0;
+  }
+
+  .el-dialog__footer {
+    border-top: 1px solid rgb(216, 216, 216);
+    padding: 13px 20px;
+
+    .dialog-footer {
+      justify-content: space-between;
+
+      .cancelBtn {
+        line-height: 0;
+      }
+    }
+  }
+
+  .el-step.is-horizontal .el-step__line {
+    left: 34px;
+    top: 14px;
+  }
+
+  .el-step__line {
+    background-color: rgba(0, 117, 233, 0.15);
+    width: 20px;
+  }
+
+  .el-step__head.is-wait .el-step__icon.is-text {
+    border: 1px solid #0075e9 !important;
+    color: #0075e9;
+    background: #fff !important;
+  }
+
+  .el-step__head.is-success .el-step__icon.is-text {
+    background: #0075e9 !important;
+  }
+
+  .el-step__head.is-success .el-icon-check::before {
+    color: #fff !important;
+  }
+}

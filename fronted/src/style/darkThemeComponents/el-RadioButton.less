@@ -1,0 +1,30 @@
+.el-radio-group {
+  .el-radio-button {
+    &.is-active {
+      .el-radio-button__inner {
+        border-image: var(--primary-btn);
+        background: var(--logo-bg) no-repeat top right, var(--primary-btn) !important;
+        background-size: 100% 100% !important;
+      }
+    }
+
+    .el-radio-button__inner {
+      background: transparent;
+      border-color: var(--light-blue-color);
+      color: var(--white-color);
+      transition: all 0s;
+
+      &:hover {
+        background: var(--primary-btn);
+        border-image: var(--primary-btn);
+      }
+    }
+  }
+
+  .el-radio-button--mini {
+    span {
+      height: 34px;
+      line-height: 18px !important;
+    }
+  }
+}

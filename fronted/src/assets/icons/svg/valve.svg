@@ -1,0 +1,70 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 地面 -->
+  <rect x="30" y="150" width="120" height="10" rx="2" fill="#4a5568"/>
+  
+  <!-- 阀门 1（切断阀） -->
+  <rect x="35" y="110" width="15" height="40" rx="2" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <rect x="37" y="115" width="11" height="15" rx="1" fill="#e53e3e" opacity="0.8"/>
+  <circle cx="42" cy="105" r="5" fill="#718096"/>
+  <text x="42" y="140" text-anchor="middle" fill="#ffffff" font-size="6" font-family="Arial">V1</text>
+  
+  <!-- 阀门 2（切断阀） -->
+  <rect x="55" y="110" width="15" height="40" rx="2" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <rect x="57" y="115" width="11" height="15" rx="1" fill="#e53e3e" opacity="0.8"/>
+  <circle cx="62" cy="105" r="5" fill="#718096"/>
+  <text x="62" y="140" text-anchor="middle" fill="#ffffff" font-size="6" font-family="Arial">V2</text>
+  
+  <!-- 阀门 3（调节阀） -->
+  <rect x="75" y="110" width="15" height="40" rx="2" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <rect x="77" y="120" width="11" height="10" rx="1" fill="#4299e1" opacity="0.8"/>
+  <circle cx="82" cy="105" r="5" fill="#718096"/>
+  <text x="82" y="140" text-anchor="middle" fill="#ffffff" font-size="6" font-family="Arial">V3</text>
+  
+  <!-- 阀门 4（安全阀） -->
+  <rect x="95" y="110" width="15" height="40" rx="2" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <rect x="97" y="115" width="11" height="15" rx="1" fill="#f6ad55" opacity="0.8"/>
+  <circle cx="102" cy="105" r="5" fill="#718096"/>
+  <text x="102" y="140" text-anchor="middle" fill="#ffffff" font-size="6" font-family="Arial">V4</text>
+  
+  <!-- 管道 -->
+  <rect x="35" y="135" width="75" height="6" rx="2" fill="#718096"/>
+  <rect x="35" y="105" width="75" height="6" rx="2" fill="#718096"/>
+  
+  <!-- 开度指示 -->
+  <rect x="40" y="95" width="6" height="6" fill="#48bb78"/>
+  <rect x="60" y="95" width="6" height="6" fill="#e53e3e"/>
+  <rect x="80" y="95" width="6" height="6" fill="#4299e1">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="100" y="95" width="6" height="6" fill="#f6ad55"/>
+  
+  <!-- 压力表 -->
+  <circle cx="45" cy="85" r="5" fill="#e2e8f0" stroke="#4a5568" stroke-width="1"/>
+  <text x="45" y="87" text-anchor="middle" fill="#2d3748" font-size="3" font-family="Arial">P1</text>
+  
+  <circle cx="90" cy="85" r="5" fill="#e2e8f0" stroke="#4a5568" stroke-width="1"/>
+  <text x="90" y="87" text-anchor="middle" fill="#2d3748" font-size="3" font-family="Arial">P2</text>
+  
+  <!-- 温度计 -->
+  <rect x="65" y="85" width="4" height="10" rx="1" fill="#fc8181"/>
+  <rect x="105" y="85" width="4" height="10" rx="1" fill="#f56565"/>
+  
+  <!-- 流动箭头 -->
+  <path d="M30 108 L35 108" stroke="#4299e1" stroke-width="3" stroke-linecap="round">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M110 108 L115 108" stroke="#4299e1" stroke-width="3" stroke-linecap="round">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- 状态指示灯 -->
+  <circle cx="42" y="125" r="2" fill="#48bb78">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="62" y="125" r="2" fill="#48bb78"/>
+  <circle cx="82" y="125" r="2" fill="#4299e1"/>
+  <circle cx="102" y="125" r="2" fill="#f6ad55"/>
+  
+  <!-- 标签 -->
+  <text x="90" y="170" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Arial">阀门组</text>
+</svg>

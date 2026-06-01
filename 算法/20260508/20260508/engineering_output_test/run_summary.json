@@ -1,0 +1,40 @@
+{
+  "save_dir": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test",
+  "csv_files": {
+    "summary_timeseries": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\summary_timeseries.csv",
+    "bog_components": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\bog_components.csv",
+    "tank_timeseries": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\tank_timeseries.csv",
+    "device_status_long": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\device_status_long.csv",
+    "line_loads": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\line_loads.csv",
+    "lp_onoff": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\lp_onoff.csv",
+    "hp_onoff": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\hp_onoff.csv",
+    "sw_onoff": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\sw_onoff.csv",
+    "orv_onoff": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\orv_onoff.csv",
+    "compressor_levels": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\compressor_levels.csv",
+    "tank_status_wide": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\tank_status_wide.csv",
+    "tank_level_wide": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\tank_level_wide.csv",
+    "line_power_log_2h": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\line_power_log_2h.csv",
+    "kpi_summary": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\kpi_summary.csv"
+  },
+  "png_files": {
+    "sendout_unload": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\plot_sendout_and_unload.png",
+    "bog": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\plot_bog_components.png",
+    "tank_levels": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\plot_tank_levels.png",
+    "line_power": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\plot_line_power_and_peak.png",
+    "cost_breakdown": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\plot_cost_breakdown.png",
+    "lp_heatmap": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\plot_lp_heatmap.png",
+    "hp_heatmap": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\plot_hp_heatmap.png",
+    "sw_heatmap": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\plot_sw_heatmap.png",
+    "orv_heatmap": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\plot_orv_heatmap.png",
+    "comp_heatmap": "D:\\project\\LNG调度系统\\初版\\算法\\20260508\\20260508\\engineering_output_test\\plot_compressor_heatmap.png"
+  },
+  "start_time": "2026-05-06 00:00",
+  "horizon_hours": 24,
+  "line1_peak_kw": 3871.5719307802296,
+  "line2_peak_kw": 5300.0,
+  "energy_cost_cny": 58156.32586410348,
+  "demand_charge_cny": 428770.98776397575,
+  "total_cost_cny": 486927.31362807925,
+  "total_output_m3": 16000.000000000002,
+  "total_unload_m3": 45000.0
+}

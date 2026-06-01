@@ -1,0 +1,83 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 地面 -->
+  <rect x="30" y="150" width="120" height="10" rx="2" fill="#4a5568"/>
+  
+  <!-- 泵体 1（A 泵） -->
+  <rect x="35" y="100" width="20" height="50" rx="3" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <circle cx="45" cy="90" r="10" fill="#718096" stroke="#2d3748" stroke-width="2"/>
+  <circle cx="45" cy="90" r="6" fill="#4a5568"/>
+  <!-- 旋转效果 -->
+  <ellipse cx="45" cy="90" rx="5" ry="2" fill="#cbd5e0">
+    <animateTransform attributeName="transform" type="rotate" from="0 45 90" to="360 45 90" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- 泵体 2（B 泵） -->
+  <rect x="60" y="100" width="20" height="50" rx="3" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <circle cx="70" cy="90" r="10" fill="#718096" stroke="#2d3748" stroke-width="2"/>
+  <circle cx="70" cy="90" r="6" fill="#4a5568"/>
+  <ellipse cx="70" cy="90" rx="5" ry="2" fill="#cbd5e0">
+    <animateTransform attributeName="transform" type="rotate" from="180 70 90" to="540 70 90" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- 泵体 3（C 泵） -->
+  <rect x="85" y="100" width="20" height="50" rx="3" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <circle cx="95" cy="90" r="10" fill="#718096" stroke="#2d3748" stroke-width="2"/>
+  <circle cx="95" cy="90" r="6" fill="#4a5568"/>
+  <ellipse cx="95" cy="90" rx="5" ry="2" fill="#cbd5e0">
+    <animateTransform attributeName="transform" type="rotate" from="90 95 90" to="450 95 90" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- 泵体 4（D 泵） -->
+  <rect x="110" y="100" width="20" height="50" rx="3" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <circle cx="120" cy="90" r="10" fill="#718096" stroke="#2d3748" stroke-width="2"/>
+  <circle cx="120" cy="90" r="6" fill="#4a5568"/>
+  
+  <!-- 入口管道 -->
+  <rect x="35" y="135" width="95" height="8" rx="2" fill="#4299e1"/>
+  <path d="M30 139 L35 139" stroke="#4299e1" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- 出口管道 -->
+  <rect x="35" y="80" width="95" height="8" rx="2" fill="#48bb78"/>
+  <path d="M130 84 L140 84" stroke="#48bb78" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- 连接管 -->
+  <rect x="42" y="100" width="6" height="8" fill="#718096"/>
+  <rect x="67" y="100" width="6" height="8" fill="#718096"/>
+  <rect x="92" y="100" width="6" height="8" fill="#718096"/>
+  <rect x="117" y="100" width="6" height="8" fill="#718096"/>
+  
+  <!-- 阀门 -->
+  <rect x="40" y="125" width="10" height="5" fill="#e53e3e"/>
+  <rect x="65" y="125" width="10" height="5" fill="#e53e3e"/>
+  <rect x="90" y="125" width="10" height="5" fill="#48bb78"/>
+  <rect x="115" y="125" width="10" height="5" fill="#48bb78"/>
+  
+  <!-- 水流效果 -->
+  <circle cx="50" cy="139" r="2" fill="#4299e1" opacity="0.8">
+    <animate attributeName="cx" values="50;70;90;110" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50" cy="139" r="2" fill="#4299e1" opacity="0.6">
+    <animate attributeName="cx" values="50;70;90;110" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- 压力表 -->
+  <circle cx="50" cy="70" r="4" fill="#e2e8f0" stroke="#4a5568" stroke-width="1"/>
+  <text x="50" y="72" text-anchor="middle" fill="#2d3748" font-size="3" font-family="Arial">P1</text>
+  
+  <circle cx="110" cy="70" r="4" fill="#e2e8f0" stroke="#4a5568" stroke-width="1"/>
+  <text x="110" y="72" text-anchor="middle" fill="#2d3748" font-size="3" font-family="Arial">P2</text>
+  
+  <!-- 状态灯 -->
+  <circle cx="45" y="115" r="2.5" fill="#48bb78">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="70" y="115" r="2.5" fill="#48bb78">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="95" y="115" r="2.5" fill="#f6ad55">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- 标签 -->
+  <text x="90" y="170" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Arial">海水泵</text>
+</svg>

@@ -1,0 +1,202 @@
+// 分割线
+.list-group-striped > .list-group-item {
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.list-group {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-group-item {
+  border-bottom: 1px solid #83939b;
+  border-top: 1px solid #83939b;
+  margin-bottom: -1px;
+  padding: 11px 0;
+  font-size: 13px;
+}
+
+.pull-right {
+  float: right !important;
+}
+// 文本居中
+.text-center {
+  text-align: center;
+}
+// 宽度100%
+.g-w100 {
+  width: 100%;
+}
+// 高度100%
+.g-h100 {
+  height: 100%;
+}
+// flex布局
+.g-flex {
+  display: flex;
+}
+// 横向flex
+.g-row-flex {
+  display: flex;
+  flex-direction: row;
+}
+//自定义搜索布局
+.search-panel {
+  width:100%;
+  height:40px;
+  padding:0px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  .left-panel {display: flex;align-items: center;justify-content: start;}
+  .right-panel {display: flex;align-items: center;justify-content: end;}
+}
+// 横向flex，水平居中
+.g-row-flex-H {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+// 横向flex，垂直居中
+.g-row-flex-V {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+// 横向flex，水平垂直居中
+.g-row-flex-HV {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+// 竖向flex
+.g-column-flex {
+  display: flex;
+  flex-direction: column;
+}
+// 竖向flex，水平居中
+.g-column-flex-H {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+// 竖向flex，垂直居中
+.g-column-flex-V {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+// 竖向flex，水平垂直居中
+.g-column-flex-HV {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+// header右侧图标
+.img-logo {
+  width: 22px;
+  height: 22px;
+}
+// header的svg图标样式
+.panelIconClass {
+  width: 40px !important;
+  height: 25px !important;
+  cursor: pointer;
+}
+// 带省略号...的样式
+.omissionTooltip {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+// 14号字体
+.primary-font-size {
+  font-size: 14px;
+}
+// 18号字体
+.small-font-size {
+  font-size: 16px;
+}
+// 18号字体
+.big-font-size {
+  font-size: 18px;
+}
+// 18号字体
+.large-font-size {
+  font-size: 22px;
+}
+//滑动滚动条父级
+.app-container2 {
+  height: 100%;
+}
+//滑动滚动条
+.app-container3 {
+  margin-top: 20px;
+  height: calc(100% - 100px);
+  position: relative;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    //滑块部分
+    border-radius: 5px;
+    background-color: rgb(175, 74, 240);
+  }
+  &::-webkit-scrollbar-track {
+    //轨道部分
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #ededed;
+    border-radius: 5px;
+  }
+}
+.marginL20{
+  margin-left: 20px;
+}
+.nopadding{
+  padding:0px;
+}
+//卡片带边框
+.cardBorder{
+  width:100%;
+  height:100%;
+  padding: 0px 5px 5px 5px;
+  .borderLine{
+    width:100%;
+    height:100%;
+    border: solid 1px #256C96;
+  }
+}
+//卡片带标题
+.cardTitle {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding:0px 5px 5px 5px;
+  .head {
+    background: linear-gradient(to right, rgba(2, 30, 54, 0.2), rgba(0, 144, 188, 0.8));
+    width: inherit;
+    height: 40px;
+    padding-left: 15px;
+    top: 0px;
+    font-size: 14px;
+    text-align: start;
+    line-height: 40px;
+    border:solid 1px #256C96;
+  }
+  .chartContent {
+    width: inherit;
+    height: calc(100% - 40px);
+    border:solid 1px #256C96;
+    border-top: 0px;
+  }
+}

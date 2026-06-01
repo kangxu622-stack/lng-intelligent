@@ -1,0 +1,49 @@
+//部门数据样式
+// .head-container {
+.el-tree {
+  background: transparent;
+  // background-image: var(--logo-bg) !important;
+  background-size: unset !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+  color: #fff;
+  // border: 1px solid var(--light-blue-color);
+
+  .el-tree-node__content:hover {
+    background: #203a51;
+  }
+
+  .el-tree-node:focus > .el-tree-node__content {
+    background-color: transparent;
+  }
+}
+// }
+.el-tree-node__label {
+  font-size: 14px;
+}
+
+.mbBottom {
+  margin-bottom: 15px;
+}
+
+.mb8 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+//分页器
+.pagination-container {
+  background: transparent;
+
+  .el-pagination {
+    text-align: right;
+  }
+}
+// 部门数据
+.left {
+  background: rgba(5, 41, 68, 0.9);
+  border: 1px solid var(--light-blue-color);
+  padding-top: 10px;
+  // height: 84vh;
+  height: calc(100vh - 141px);
+}

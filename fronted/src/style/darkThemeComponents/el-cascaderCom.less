@@ -1,0 +1,33 @@
+.el-cascader-panel {
+  background: var(--drop-down-color);
+  border: 0 solid rgba(27, 87, 130, 1);
+}
+
+.el-cascader-menu {
+  color: var(--white-opacity7);
+  border-right: solid 1px rgba(27, 87, 130, 1);
+}
+
+.el-cascader-node.in-active-path,
+.el-cascader-node.is-active,
+.el-cascader-node.is-selectable.in-checked-path {
+  color: var(--light-blue-color);
+}
+
+.el-cascader-node:not(.is-disabled):focus,
+.el-cascader-node:not(.is-disabled):hover {
+  background: linear-gradient(to right, rgba(2, 30, 54, 0.2), rgba(0, 144, 188, 0.8));
+}
+
+.el-cascader__dropdown {
+  border: 1px solid rgba(27, 87, 130, 1);
+}
+
+.el-cascader .el-input .el-input__inner:focus,
+.el-cascader .el-input.is-focus .el-input__inner {
+  border-color: var(--light-blue-color);
+}
+
+.el-icon-check::before {
+  color: var(--light-blue-color);
+}

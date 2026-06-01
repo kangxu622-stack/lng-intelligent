@@ -1,0 +1,98 @@
+.el-button--primary {
+  border-radius: 0;
+  border: 0;
+  color: #fff;
+  // width: 100px;
+  font-size: 14px;
+  background: var(--logo-bg) no-repeat top right, var(--primary-btn) !important;
+  background-size: 100% 100% !important;
+}
+
+.commonBtn,
+.el-button--danger.is-plain.is-disabled {
+  border: 1px solid var(--light-blue-color) !important;
+  border-radius: 0;
+  color: var(--light-blue-color) !important;
+  background: transparent !important;
+  height: 40px;
+  // width: 100px;
+  font-size: 14px;
+  // background-image: var(--logo-bg) !important;
+  background-size: 100% 100% !important;
+}
+
+.cancelBtn {
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 0;
+  color: var(--white-opacity7) !important;
+  background: transparent !important;
+  // background-image: var(--logo-bg) !important;
+  background-size: 100% 100% !important;
+}
+
+.errorBtn {
+  background: #a61d24;
+  color: #fff;
+  // background-image: var(--logo-bg) !important;
+  background-size: 100% 100% !important;
+  border-radius: 0;
+  border: 1px solid #a61d24;
+}
+
+.errorBtnplain {
+  background: transparent;
+  color: #a61d24;
+  border: 1px solid #a61d24;
+  // background-image: var(--logo-bg) !important;
+  background-size: 100% 100% !important;
+  border-radius: 0;
+}
+
+.disableBtn {
+  color: #c0c4cc;
+  cursor: not-allowed;
+  background: rgba(51, 69, 86, 0.8) !important;
+  background-color: transparent;
+  border-color: #c0c4cc !important;
+  border-radius: 0;
+  opacity: 0.5;
+  // background-image: var(--logo-bg) !important;
+  background-size: 100% 100% !important;
+}
+
+.el-button {
+  //TODO: Maybe change back UI调整
+  //height: 40px;
+  height: 34px;
+  padding: 10px 16px;
+  // margin-left: 20px !important;
+}
+
+.el-button.is-plain:hover {
+  background: var(--opacity-blue-bg);
+  border: 1px solid var(--light-blue-color);
+}
+
+//primary按钮点击时的样式按钮hover时的样式
+.buttonActive_primary:hover {
+  border: none;
+  background: var(--logo-bg) no-repeat top right, var(--primary-btn) !important;
+  background-size: 100% 100% !important;
+}
+
+.buttonActive_primary {
+  background: var(--logo-bg) no-repeat top right, var(--primary-btn) !important;
+  background-size: 100% 100% !important;
+}
+
+.el-button--small {
+  border-radius: 0;
+}
+
+.el-button--text {
+  padding: 0 !important;
+}
+
+.el-button + .el-button {
+  margin-left: 20px !important;
+}

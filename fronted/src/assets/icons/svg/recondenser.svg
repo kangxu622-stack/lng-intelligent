@@ -1,0 +1,68 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 基座 -->
+  <rect x="35" y="145" width="110" height="15" rx="3" fill="#4a5568"/>
+  
+  <!-- 外壳 -->
+  <rect x="50" y="50" width="80" height="95" rx="5" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  
+  <!-- 气相区（上部） -->
+  <rect x="58" y="58" width="64" height="25" rx="2" fill="#4299e1" opacity="0.4"/>
+  <text x="90" y="73" text-anchor="middle" fill="#90cdf4" font-size="8" font-family="Arial">气相区</text>
+  
+  <!-- 冷凝区（中部） -->
+  <rect x="58" y="88" width="64" height="30" rx="2" fill="#63b3ed" opacity="0.6"/>
+  <text x="90" y="106" text-anchor="middle" fill="#bee3f8" font-size="8" font-family="Arial">冷凝区</text>
+  
+  <!-- 液相区（下部） -->
+  <rect x="58" y="123" width="64" height="15" rx="2" fill="#3182ce" opacity="0.8"/>
+  
+  <!-- 气泡效果 -->
+  <circle cx="70" cy="100" r="3" fill="#ffffff" opacity="0.6">
+    <animate attributeName="cy" values="120;100;80" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.6;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="90" cy="95" r="2.5" fill="#ffffff" opacity="0.5">
+    <animate attributeName="cy" values="115;95;75" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.5;0.2" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="110" cy="105" r="2" fill="#ffffff" opacity="0.4">
+    <animate attributeName="cy" values="125;105;85" dur="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.4;0.1" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- BOG 入口 -->
+  <rect x="40" y="70" width="10" height="12" fill="#f6ad55"/>
+  <path d="M30 76 L40 76" stroke="#f6ad55" stroke-width="4" stroke-linecap="round"/>
+  <text x="35" y="68" text-anchor="middle" fill="#f6ad55" font-size="6" font-family="Arial">BOG</text>
+  
+  <!-- LNG 入口 -->
+  <rect x="40" y="100" width="10" height="12" fill="#4299e1"/>
+  <path d="M30 106 L40 106" stroke="#4299e1" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- 出口 -->
+  <rect x="130" y="115" width="10" height="12" fill="#48bb78"/>
+  <path d="M140 121 L150 121" stroke="#48bb78" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- 温度计 -->
+  <rect x="105" y="60" width="5" height="15" rx="2" fill="#fc8181"/>
+  <text x="107" y="70" text-anchor="middle" fill="#ffffff" font-size="4" font-family="Arial">T1</text>
+  
+  <rect x="105" y="95" width="5" height="15" rx="2" fill="#f56565"/>
+  <text x="107" y="105" text-anchor="middle" fill="#ffffff" font-size="4" font-family="Arial">T2</text>
+  
+  <!-- 压力表 -->
+  <circle cx="75" cy="65" r="5" fill="#e2e8f0" stroke="#4a5568" stroke-width="1"/>
+  <text x="75" y="67" text-anchor="middle" fill="#2d3748" font-size="4" font-family="Arial">P</text>
+  
+  <!-- 液位计 -->
+  <rect x="115" y="90" width="8" height="25" rx="2" fill="#4fd1c5" opacity="0.7"/>
+  <rect x="116" y="105" width="6" height="10" fill="#38b2ac"/>
+  
+  <!-- 状态灯 -->
+  <circle cx="140" cy="40" r="4" fill="#48bb78">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- 标签 -->
+  <text x="90" y="170" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Arial">再冷凝器</text>
+</svg>

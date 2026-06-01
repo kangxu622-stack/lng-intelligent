@@ -1,0 +1,125 @@
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: var(--light-blue-color);
+}
+
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+  color: #595959;
+  font-weight: 500;
+  border: 1px solid var(--light-blue-color);
+  // background-image: var(--logo-bg) !important;
+  background-size: 100% 100% !important;
+}
+
+.el-pagination__total {
+  color: #909399;
+  margin-left: 20px;
+}
+
+.app-container {
+  .pagination-container {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+  }
+}
+
+.el-pagination button:disabled {
+  background: transparent;
+  border: 1px solid var(--light-blue-color);
+  color: var(--light-blue-color);
+  font-weight: 500;
+}
+
+.el-pager li.active {
+  background: var(--light-blue-color);
+  border: 1px solid var(--light-blue-color);
+  color: #fff;
+  font-weight: 500;
+}
+
+.el-pagination .el-select .el-input .el-input__inner {
+  height: 28px !important;
+  line-height: 28px !important;
+  padding-top: 2px;
+}
+
+.el-pagination .el-select .el-input .el-select__caret {
+  line-height: 28px !important;
+}
+
+.el-pagination .el-select .el-input__icon {
+  line-height: 28px !important;
+}
+
+.smallNoBg {
+  .el-pagination__total {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #909399 !important;
+  }
+
+  .el-pagination .el-select .el-input .el-input__inner {
+    border-radius: 2px;
+    border: 1px solid #b3bdca;
+    background: #fff;
+    width: 100px;
+    height: 20px !important;
+    line-height: 20px !important;
+    padding-top: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #b3bdca;
+  }
+
+  .el-pagination .el-select .el-input .el-select__caret {
+    line-height: 20px !important;
+  }
+
+  .el-pagination.is-background .btn-prev {
+    border: 1px solid transparent;
+    background: transparent;
+  }
+
+  .el-pagination.is-background .btn-next {
+    border: 1px solid transparent;
+    background: transparent;
+  }
+
+  .el-pagination.is-background .el-pager li:not(.disabled).active {
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .el-pagination.is-background .el-pager li {
+    border: 1px solid transparent;
+    font-size: 12px;
+    font-weight: 500;
+    color: #595959;
+    line-height: 19px;
+    background: transparent;
+  }
+
+  .el-pagination__jump {
+    font-size: 14px;
+    font-weight: 400;
+    color: #909399;
+  }
+
+  .el-pagination--small .el-pagination__editor.el-input .el-input__inner {
+    width: 46px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid #0075e9;
+  }
+
+  .el-pagination.is-background .btn-next:disabled {
+    color: #595959;
+  }
+
+  .el-pagination.is-background .btn-prev:disabled {
+    color: #595959;
+  }
+}

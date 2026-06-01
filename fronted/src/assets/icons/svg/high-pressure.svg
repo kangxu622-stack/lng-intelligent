@@ -1,0 +1,74 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 基座 -->
+  <rect x="30" y="150" width="120" height="10" rx="2" fill="#4a5568"/>
+  
+  <!-- 泵体 1（A 泵） -->
+  <rect x="35" y="90" width="25" height="60" rx="3" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <rect x="38" y="95" width="19" height="20" rx="2" fill="#4299e1" opacity="0.6"/>
+  <text x="47" y="107" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Arial">A</text>
+  
+  <!-- 泵体 2（B 泵） -->
+  <rect x="65" y="90" width="25" height="60" rx="3" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <rect x="68" y="95" width="19" height="20" rx="2" fill="#4299e1" opacity="0.6"/>
+  <text x="77" y="107" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Arial">B</text>
+  
+  <!-- 泵体 3（C 泵） -->
+  <rect x="95" y="90" width="25" height="60" rx="3" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <rect x="98" y="95" width="19" height="20" rx="2" fill="#4299e1" opacity="0.6"/>
+  <text x="107" y="107" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Arial">C</text>
+  
+  <!-- 泵体 4（D 泵） -->
+  <rect x="125" y="90" width="25" height="60" rx="3" fill="#2d3748" stroke="#4a5568" stroke-width="2"/>
+  <rect x="128" y="95" width="19" height="20" rx="2" fill="#4299e1" opacity="0.3"/>
+  <text x="137" y="107" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Arial">D</text>
+  
+  <!-- 入口总管 -->
+  <rect x="35" y="135" width="115" height="8" rx="2" fill="#718096"/>
+  
+  <!-- 出口总管 -->
+  <rect x="35" y="85" width="115" height="8" rx="2" fill="#f6ad55"/>
+  
+  <!-- 连接管 -->
+  <rect x="46" y="85" width="8" height="8" fill="#718096"/>
+  <rect x="76" y="85" width="8" height="8" fill="#718096"/>
+  <rect x="106" y="85" width="8" height="8" fill="#718096"/>
+  <rect x="136" y="85" width="8" height="8" fill="#718096"/>
+  
+  <!-- 阀门 -->
+  <rect x="43" y="125" width="14" height="6" fill="#e53e3e"/>
+  <rect x="73" y="125" width="14" height="6" fill="#e53e3e"/>
+  <rect x="103" y="125" width="14" height="6" fill="#e53e3e"/>
+  <rect x="133" y="125" width="14" height="6" fill="#48bb78"/>
+  
+  <!-- 压力表 -->
+  <circle cx="50" cy="75" r="5" fill="#e2e8f0" stroke="#4a5568" stroke-width="1"/>
+  <text x="50" y="77" text-anchor="middle" fill="#2d3748" font-size="4" font-family="Arial">P</text>
+  
+  <circle cx="130" cy="75" r="5" fill="#e2e8f0" stroke="#4a5568" stroke-width="1"/>
+  <text x="130" y="77" text-anchor="middle" fill="#2d3748" font-size="4" font-family="Arial">P</text>
+  
+  <!-- 流动效果 -->
+  <circle cx="50" cy="89" r="2" fill="#f6ad55" opacity="0.8">
+    <animate attributeName="cy" values="89;85;89" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="80" cy="89" r="2" fill="#f6ad55" opacity="0.6">
+    <animate attributeName="cy" values="85;89;85" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="110" cy="89" r="2" fill="#f6ad55" opacity="0.7">
+    <animate attributeName="cy" values="89;85;89" dur="1.1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- 状态指示灯 -->
+  <circle cx="47" y="115" r="3" fill="#48bb78">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="77" y="115" r="3" fill="#48bb78">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="107" y="115" r="3" fill="#48bb78">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.7s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- 标签 -->
+  <text x="90" y="170" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Arial">高压泵组</text>
+</svg>

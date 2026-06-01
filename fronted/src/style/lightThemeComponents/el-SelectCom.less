@@ -1,0 +1,241 @@
+// .el-input {
+//     border: 1px solid var(--light-blue-color);
+// }
+
+// .el-select .el-input__inner {
+// border: 1px solid var(--light-blue-color);
+
+// }
+// .el-select .el-input__inner:hover, .el-select .el-input__inner:focus{
+//     border: 1px solid var(--light-blue-color);
+// }
+
+.el-input--suffix .el-input__inner {
+  color: var(--light-blue-color);
+  // background-image: var(--logo-bg) !important;
+  background-size: unset !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+}
+// .el-select {
+//     border: 1px solid var(--light-blue-color);
+// }
+
+.el-select .el-input {
+  background: var(--opacity-blue-bg);
+
+  input {
+    border: 1px solid var(--light-blue-color);
+  }
+}
+
+.el-select .el-input__inner {
+  border: 0;
+}
+
+.el-select-dropdown {
+  border-radius: 0;
+  border: 0;
+}
+
+.el-select-dropdown__item.selected {
+  color: var(--light-blue-color);
+  font-weight: 400;
+}
+
+.el-popper[x-placement^="bottom"] .popper__arrow::after {
+  border-bottom-color: #fff;
+}
+
+.el-select-dropdown .popper__arrow {
+  display: none;
+}
+
+.el-tag.el-tag--info {
+  background: transparent;
+  color: var(--light-blue-color);
+  border-color: var(--light-blue-color);
+}
+
+.collapseTags .el-select__tags .el-tag.el-tag--info {
+  max-width: 70%;
+}
+
+.el-select__tags .el-tag.el-tag--info {
+  background: rgba(0, 117, 233, 0.2) !important;
+  border: unset !important;
+}
+
+.dropdown {
+  input {
+    border: none !important;
+  }
+}
+
+.selectColor {
+  input {
+    background: #fff !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #b3bdca !important;
+    border: 1px solid #b3bdca !important;
+  }
+
+  .el-input__inner::placeholder {
+    color: #b3bdca !important;
+  }
+
+  .el-input__inner:hover {
+    border: 1px solid #0075e9 !important;
+    color: #0075e9 !important;
+  }
+
+  .el-input.is-focus .el-input__inner {
+    border: 1px solid #0075e9 !important;
+    color: #0075e9 !important;
+  }
+
+  .el-input.is-select .el-input__inner {
+    border: 1px solid #0075e9 !important;
+    color: #0075e9 !important;
+  }
+
+  .el-input__inner:focus {
+    border: 1px solid #0075e9 !important;
+    color: #0075e9 !important;
+  }
+}
+
+.smallSelect {
+  input {
+    border: none !important;
+    background: #fff !important;
+    border-radius: 2px !important;
+    height: 26px;
+  }
+
+  .el-input {
+    font-size: 10px;
+    background: transparent;
+  }
+
+  .el-input__inner {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .el-input--suffix .el-input__inner {
+    padding-left: 10px !important;
+    padding-right: 25px !important;
+  }
+
+  .el-input__suffix {
+    right: 0;
+    top: -1px;
+  }
+}
+
+// 暂时修改,需要寻找不影响全局的下拉缝隙高度
+.el-popper[x-placement^="bottom"] {
+  margin-top: 5px !important;
+}
+
+.paginationDropDown {
+  background: #fff !important;
+  border-radius: 2px;
+  min-width: 100px !important;
+
+  .el-select-dropdown__item.selected {
+    font-size: 10px !important;
+    color: var(--light-blue-color) !important;
+  }
+
+  .el-select-dropdown__item {
+    font-size: 10px !important;
+    height: 24px !important;
+    line-height: 24px !important;
+    padding: 0 10px !important;
+  }
+
+  .el-select-dropdown__item:hover {
+    background: transparent !important;
+  }
+
+  .el-select-dropdown__item.hover {
+    background: transparent !important;
+  }
+
+  .el-select-dropdown__wrap {
+    background: transparent !important;
+  }
+}
+
+.smallSelectDropDown {
+  height: 180px;
+  background: #fff !important;
+  border-radius: 2px;
+  top: 44px !important;
+
+  .el-select-dropdown__item.selected {
+    font-size: 10px !important;
+    color: var(--light-blue-color) !important;
+  }
+
+  .el-select-dropdown__item {
+    font-size: 10px !important;
+    height: 24px !important;
+    line-height: 24px !important;
+    padding: 0 10px !important;
+  }
+
+  .el-select-dropdown__item:hover {
+    background: transparent !important;
+  }
+
+  .el-select-dropdown__item.hover {
+    background: transparent !important;
+  }
+
+  .el-select-dropdown__wrap {
+    background: transparent !important;
+  }
+}
+
+.whiteNoBorderSelect {
+  .el-input {
+    border: none !important;
+  }
+
+  .el-input__inner {
+    background: transparent !important;
+    color: #fff !important;
+  }
+
+  .el-select__caret {
+    color: #fff !important;
+  }
+}
+
+.noBorderBg {
+  input {
+    border: none !important;
+  }
+
+  .el-input__inner {
+    background: transparent;
+    // background-image: var(--logo-bg) !important;
+    background-size: unset !important;
+    background-repeat: no-repeat !important;
+    background-position: right top !important;
+  }
+  /* stylelint-disable */
+  .el-input__inner::input-placeholder {
+    color: var(--light-blue-color);
+  }
+  /* stylelint-enable */
+}
+
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+  color: var(--light-blue-color);
+}

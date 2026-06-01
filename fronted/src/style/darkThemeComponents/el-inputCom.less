@@ -1,0 +1,133 @@
+.el-form-item__content {
+  line-height: 34px;
+}
+
+.el-form-item__label {
+  //TODO: Maybe change back UI调整
+  line-height: 34px;
+}
+
+.el-form-item {
+  //TODO: Maybe change back UI调整
+  margin-bottom: 20px;
+}
+
+// Element Plus 3.x 使用 el-input__wrapper
+.el-input__wrapper {
+  background: transparent !important;
+  background-color: transparent !important;
+  // 去掉默认白色边框，只保留蓝色边框
+  border: 1px solid var(--light-blue-color) !important;
+  box-shadow: none !important;
+  // 控制整体高度，避免超出表格行高
+  min-height: 28px;
+}
+
+.el-input__inner {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--light-blue-color);
+  // background-image: var(--logo-bg) !important;
+  background-size: unset !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+  //TODO: Maybe change back UI调整
+  //padding:0px;
+  height: 28px;
+}
+
+.el-input__icon {
+  //TODO: Maybe change back UI调整
+  line-height: 34px;
+}
+
+.el-input-number.is-controls-right .el-input-number__decrease,
+.el-input-number.is-controls-right .el-input-number__increase {
+  //TODO: Maybe change back UI调整
+  line-height: 17px;
+}
+
+.el-input-number {
+  //TODO: Maybe change back UI调整
+  line-height: 32px;
+}
+
+// .loginInput .el-input__inner {
+//   background: transparent;
+//   color: #fff;
+//   border: 1px solid var(--td-gray-color-9) !important;
+//   border-radius: 4px;
+// }
+.el-form-item__content,
+.left {
+  .el-input__inner {
+    //TODO: Maybe change back UI调整
+    //height: 40px;
+    height: 28px;
+  }
+}
+
+.el-input.is-disabled .el-input__inner {
+  background: rgba(51, 69, 86, 0.8);
+  border: 1px solid #c0c4cc;
+  opacity: 0.5;
+  // background-image: var(--logo-bg) !important;
+  background-size: unset !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+}
+
+.el-textarea.is-disabled .el-textarea__inner {
+  background: rgba(51, 69, 86, 0.8);
+  border: 1px solid #c0c4cc;
+  opacity: 0.5;
+  // background-image: var(--logo-bg) !important;
+  background-size: 100% 100% !important;
+}
+
+.el-autocomplete-suggestion {
+  background: var(--drop-down-color);
+  border: none;
+}
+
+.el-autocomplete-suggestion li {
+  color: var(--white-opacity7);
+}
+
+.el-autocomplete-suggestion li:hover {
+  color: var(--white-opacity7);
+  background: linear-gradient(to right, rgba(2, 30, 54, 0.2), rgba(0, 144, 188, 0.8));
+}
+
+.noBorderBlueBg {
+  input {
+    border: none !important;
+  }
+
+  .el-input__inner {
+    background: var(--logo-bg) no-repeat top right,
+      linear-gradient(360deg, rgba(0, 68, 115, 0.64) 0%, rgba(0, 72, 122, 0.16) 100%) !important;
+    border-radius: 2px;
+    color: #24deff;
+  }
+
+  .el-icon-search::before {
+    color: #24deff;
+  }
+
+  .el-input__inner::placeholder {
+    color: #24deff !important;
+  }
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
+input::-webkit-outer-spin-button{
+  -webkit-appearance: none !important;
+ 
+}
+input[type="number"]{
+  appearance: textfield;
+}
+

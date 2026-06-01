@@ -1,0 +1,74 @@
+.vue-treeselect__control {
+  background: var(--opacity-blue-bg);
+  color: var(--light-blue-color);
+  border: 1px solid var(--light-blue-color);
+  border-radius: 0;
+}
+
+.vue-treeselect__menu {
+  border: 1px solid var(--light-blue-color);
+  background: var(--drop-down-color);
+  color: #fff;
+}
+
+.vue-treeselect__placeholder {
+  //TODO: Maybe change back UI调整
+  //line-height: 40px !important;
+  line-height: 34px !important;
+}
+
+.vue-treeselect__single-value {
+  color: var(--light-blue-color);
+  line-height: 34px !important;
+}
+
+.vue-treeselect__option--highlight {
+  background: linear-gradient(to right, rgba(2, 30, 54, 0.2), rgba(0, 144, 188, 0.8));
+}
+
+.vue-treeselect--single .vue-treeselect__option--selected {
+  background: linear-gradient(to right, rgba(2, 30, 54, 0.2), rgba(0, 144, 188, 0.8));
+}
+
+.vue-treeselect__input {
+  // background-image: var(--logo-bg) !important;
+  background-size: 100% 100% !important;
+}
+
+.noBgBorderTree {
+  .vue-treeselect__control {
+    background: transparent;
+    border: transparent;
+  }
+
+  .vue-treeselect__single-value {
+    color: var(--light-blue-color);
+  }
+
+  .vue-treeselect__input {
+    color: var(--light-blue-color);
+    // background-image: var(--logo-bg) !important;
+    background-size: 100% 100% !important;
+  }
+
+  .vue-treeselect__control-arrow-container:hover {
+    .vue-treeselect__control-arrow {
+      color: var(--light-blue-color);
+    }
+  }
+
+  .vue-treeselect__control-arrow {
+    color: var(--light-blue-color);
+  }
+}
+
+.el-icon-arrow-right::before {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.vue-treeselect--disabled .vue-treeselect__control {
+  background: rgba(51, 69, 86, 0.8);
+  border: 1px solid #c0c4cc;
+  opacity: 0.5;
+  cursor: no-drop;
+}

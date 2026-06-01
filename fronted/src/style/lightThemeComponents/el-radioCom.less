@@ -1,0 +1,22 @@
+.el-radio {
+  // color: rgba(167,173,179,1);
+  color: var(--white-opacity7);
+  // background-image: var(--logo-bg) !important;
+  background-size: 100% 100% !important;
+  // TODO: Maybe change back，带图标的时候放开(为了突出显示图标)
+  //padding: 10px
+}
+
+.el-radio__input.is-checked + .el-radio__label {
+  color: var(--light-blue-color);
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+  border-color: var(--light-blue-color);
+  background: var(--light-blue-color);
+}
+
+.el-radio-group .el-radio-button .el-radio-button__inner {
+  height: 34px;
+  line-height: 8px;
+}
