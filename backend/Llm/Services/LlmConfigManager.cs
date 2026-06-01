@@ -22,7 +22,7 @@ public sealed class LlmConfigManager
         if (string.IsNullOrWhiteSpace(BaseUrl))
             BaseUrl = configuration["Llm:OpenAI:BaseUrl"] ?? "https://api.openai.com/v1/";
         if (string.IsNullOrWhiteSpace(Model))
-            Model = configuration["Llm:OpenAI:Model"] ?? "gpt-4o-mini";
+            Model = configuration["Llm:OpenAI:Model"] ?? "deepseek-chat";
     }
 
     public (string? ApiKey, string? BaseUrl, string? Model) GetConfig()
@@ -42,7 +42,7 @@ public sealed class LlmConfigManager
             if (input.BaseUrl != null)
                 BaseUrl = string.IsNullOrWhiteSpace(input.BaseUrl) ? "https://api.openai.com/v1/" : input.BaseUrl.Trim();
             if (input.Model != null)
-                Model = string.IsNullOrWhiteSpace(input.Model) ? "gpt-4o-mini" : input.Model.Trim();
+                Model = string.IsNullOrWhiteSpace(input.Model) ? "deepseek-chat" : input.Model.Trim();
         }
 
         SaveToFile();

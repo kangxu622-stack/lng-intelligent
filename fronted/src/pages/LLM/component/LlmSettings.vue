@@ -24,7 +24,7 @@
           <el-input v-model="form.baseUrl" placeholder="https://api.openai.com/v1" />
         </el-form-item>
         <el-form-item label="模型名称">
-          <el-input v-model="form.model" placeholder="gpt-4o-mini" />
+          <el-input v-model="form.model" placeholder="deepseek-chat" />
         </el-form-item>
       </el-form>
 
@@ -73,7 +73,7 @@ const loadConfig = async () => {
     const res = await getLlmConfig()
     Object.assign(config, res.data)
     form.baseUrl = res.data.openAiBaseUrl || 'https://api.openai.com/v1'
-    form.model = res.data.openAiModel || 'gpt-4o-mini'
+    form.model = res.data.openAiModel || 'deepseek-chat'
     form.apiKey = ''
   } catch {
     ElMessage.error('获取配置失败')

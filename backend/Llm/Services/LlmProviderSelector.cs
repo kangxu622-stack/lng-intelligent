@@ -41,7 +41,7 @@ public sealed class LlmProviderSelector
         if (!string.IsNullOrWhiteSpace(apiKey))
         {
             ActiveProvider = "openai";
-            ActiveModel = model ?? "gpt-4o-mini";
+            ActiveModel = model ?? "deepseek-chat";
             _logger.LogInformation("LLM provider: openai (model={Model})", ActiveModel);
             return _openAiProvider;
         }

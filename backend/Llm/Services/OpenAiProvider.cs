@@ -36,7 +36,7 @@ public sealed class OpenAiProvider : ILlmProvider
     private string GetModel()
     {
         var (_, _, model) = _configManager.GetConfig();
-        return model ?? "gpt-4o-mini";
+        return model ?? "deepseek-chat";
     }
 
     public Task<bool> IsAvailableAsync(CancellationToken cancellationToken = default)
