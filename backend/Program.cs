@@ -3,6 +3,8 @@ using backend.Repositories;
 using backend.Llm.Handlers;
 using backend.Llm.Services;
 using backend.Llm.Repositories;
+using backend.Llm.Training.Repositories;
+using backend.Llm.Training.Services;
 using backend.Hubs;
 using Microsoft.Extensions.FileProviders;
 
@@ -47,6 +49,16 @@ builder.Services.AddScoped<ILlmBizTypeHandler, FaultDiagnosisHandler>();
 builder.Services.AddScoped<ILlmBizTypeHandler, SchemeExplanationHandler>();
 builder.Services.AddScoped<ILlmRepository, LlmRepository>();
 builder.Services.AddScoped<ILlmAppService, LlmAppService>();
+
+// ── Training AI System ──
+builder.Services.AddScoped<ITrainingRepository, TrainingRepository>();
+builder.Services.AddScoped<IDocumentParserService, DocumentParserService>();
+builder.Services.AddScoped<ITextChunkerService, TextChunkerService>();
+builder.Services.AddScoped<IManualService, ManualService>();
+builder.Services.AddScoped<IKnowledgeService, KnowledgeService>();
+builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<ITrainingSessionService, TrainingSessionService>();
+builder.Services.AddScoped<IAnalyticsService, AnalyticsService>();
 builder.Services.AddScoped<backend.Repositories.IParameterRepository, backend.Repositories.ParameterRepository>();
 builder.Services.AddScoped<IParameterQueryService, ParameterQueryService>();
 builder.Services.AddScoped<ISimulationOrchestrator, SimulationOrchestrator>();
