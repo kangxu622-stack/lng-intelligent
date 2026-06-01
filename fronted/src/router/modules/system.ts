@@ -187,6 +187,48 @@ export default [
         name: '\u6a21\u578b\u8c03\u7528\u6d4b\u8bd5',
         meta: { hidden: false, title: '\u6a21\u578b\u8c03\u7528\u6d4b\u8bd5' },
         component: () => import('@/pages/LLM/TestCase/index.vue')
+      },
+      {
+        path: 'training-manuals',
+        name: '\u624b\u518c\u77e5\u8bc6\u5e93',
+        meta: { hidden: false, title: '\u624b\u518c\u77e5\u8bc6\u5e93' },
+        component: () => import('@/pages/LLM/Training/ManualManagement/index.vue')
+      },
+      {
+        path: 'training-knowledge',
+        name: '\u77e5\u8bc6\u70b9\u7ba1\u7406',
+        meta: { hidden: false, title: '\u77e5\u8bc6\u70b9\u7ba1\u7406' },
+        component: () => import('@/pages/LLM/Training/KnowledgeManagement/index.vue')
+      },
+      {
+        path: 'training-question-gen',
+        name: '\u667a\u80fd\u51fa\u9898',
+        meta: { hidden: false, title: '\u667a\u80fd\u51fa\u9898' },
+        component: () => import('@/pages/LLM/Training/QuestionGeneration/index.vue')
+      },
+      {
+        path: 'training-question-review',
+        name: '\u9898\u76ee\u5ba1\u6838',
+        meta: { hidden: false, title: '\u9898\u76ee\u5ba1\u6838' },
+        component: () => import('@/pages/LLM/Training/QuestionReview/index.vue')
+      },
+      {
+        path: 'self-training',
+        name: '\u81ea\u5b66\u8bad\u7ec3',
+        meta: { hidden: false, title: '\u81ea\u5b66\u8bad\u7ec3' },
+        component: () => import('@/pages/LLM/Training/SelfTraining/index.vue')
+      },
+      {
+        path: 'wrong-questions',
+        name: '\u9519\u9898\u672c',
+        meta: { hidden: false, title: '\u9519\u9898\u672c' },
+        component: () => import('@/pages/LLM/Training/WrongQuestions/index.vue')
+      },
+      {
+        path: 'training-analytics',
+        name: '\u5b66\u4e60\u5206\u6790',
+        meta: { hidden: false, title: '\u5b66\u4e60\u5206\u6790' },
+        component: () => import('@/pages/LLM/Training/Analytics/index.vue')
       }
     ]
   },
