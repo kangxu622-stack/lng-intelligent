@@ -33,7 +33,15 @@ public class MockDataService : BackgroundService
     {
         _logger.LogInformation("Mock realtime data service started.");
 
-        await EnsureSourcesAsync(stoppingToken);
+        try
+        {
+            await EnsureSourcesAsync(stoppingToken);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogWarning(ex, "Failed to load equipment sources from database. Mock data will not be generated.");
+            return;
+        }
         var rng = new Random();
 
         while (!stoppingToken.IsCancellationRequested)
