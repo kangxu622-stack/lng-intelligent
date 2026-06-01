@@ -1,5 +1,6 @@
 using backend.Services;
 using backend.Repositories;
+using backend.Llm.Handlers;
 using backend.Llm.Services;
 using backend.Llm.Repositories;
 using backend.Hubs;
@@ -40,6 +41,10 @@ builder.Services.AddSingleton<LlmConfigManager>();
 builder.Services.AddScoped<LlmProviderSelector>();
 builder.Services.AddScoped<backend.Repositories.IAuthRepository, backend.Repositories.AuthRepository>();
 builder.Services.AddScoped<IAuthAppService, AuthAppService>();
+builder.Services.AddScoped<LlmConversationEngine>();
+builder.Services.AddScoped<ILlmBizTypeHandler, QuestionHandler>();
+builder.Services.AddScoped<ILlmBizTypeHandler, FaultDiagnosisHandler>();
+builder.Services.AddScoped<ILlmBizTypeHandler, SchemeExplanationHandler>();
 builder.Services.AddScoped<ILlmRepository, LlmRepository>();
 builder.Services.AddScoped<ILlmAppService, LlmAppService>();
 builder.Services.AddScoped<backend.Repositories.IParameterRepository, backend.Repositories.ParameterRepository>();

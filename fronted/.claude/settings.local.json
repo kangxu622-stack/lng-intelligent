@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(dotnet build *)",
+      "PowerShell(try { $response = Invoke-WebRequest -Uri \"http://localhost:52333/api/llm/config\" -Method GET -TimeoutSec 5 -ErrorAction Stop; $response.Content } catch { Write-Host \"Error: $_\" })",
+      "PowerShell(try { $body = @{ baseUrl = \"https://api.deepseek.com/v1/\"; model = \"deepseek-chat\" } | ConvertTo-Json; $response = Invoke-WebRequest -Uri \"http://localhost:52333/api/llm/config\" -Method PUT -Body $body -ContentType \"application/json\" -TimeoutSec 5 -ErrorAction Stop; Write-Host \"Status:\" $response.StatusCode; Write-Host \"Body:\" $response.Content } catch { Write-Host \"Error:\" $_.Exception.GetType\\(\\).Name; Write-Host \"Message:\" $_.Exception.Message })",
+      "PowerShell(Test-Path *)",
+      "PowerShell(try { $response = Invoke-WebRequest -Uri \"http://localhost:52333/api/llm/config\" -Method GET -TimeoutSec 3 -ErrorAction Stop; Write-Host \"Status:\" $response.StatusCode; Write-Host $response.Content } catch { Write-Host \"Error:\" $_.Exception.GetType\\(\\).Name \"-\" $_.Exception.Message })",
+      "PowerShell(dotnet run *)",
+      "PowerShell(Start-Sleep -Seconds 5; try { $response = Invoke-WebRequest -Uri \"http://localhost:52333/api/llm/config\" -Method GET -TimeoutSec 5 -ErrorAction Stop; Write-Host \"Backend OK:\" $response.Content } catch { Write-Host \"Backend not ready yet:\" $_.Exception.Message })",
+      "PowerShell(Get-Content *)",
+      "PowerShell($body = '{\"baseUrl\":\"https://api.deepseek.com/v1/\",\"model\":\"deepseek-chat\"}'; try { $response = Invoke-WebRequest -Uri \"http://localhost:52333/api/llm/config\" -Method PUT -Body $body -ContentType \"application/json\" -TimeoutSec 10; Write-Host \"OK:\" $response.StatusCode; Write-Host $response.Content } catch { $errorMsg = $_.Exception.Message; Write-Host \"Error: $errorMsg\"; if \\($_.Exception.Response\\) { $reader = New-Object System.IO.StreamReader\\($_.Exception.Response.GetResponseStream\\(\\)\\); $respBody = $reader.ReadToEnd\\(\\); $reader.Close\\(\\); Write-Host \"ResponseBody: $respBody\" } })",
+      "PowerShell($client = New-Object System.Net.Http.HttpClient; $content = New-Object System.Net.Http.StringContent\\('{\"baseUrl\":\"https://api.deepseek.com/v1/\",\"model\":\"deepseek-chat\"}', [System.Text.Encoding]::UTF8, \"application/json\"\\); $response = $client.PutAsync\\(\"http://localhost:52333/api/llm/config\", $content\\).Result; Write-Host \"Status:\" $response.StatusCode; Write-Host \"Body:\" $response.Content.ReadAsStringAsync\\(\\).Result)",
+      "PowerShell(powershell -ExecutionPolicy Bypass -File \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\test-config.ps1\")",
+      "PowerShell(mysql *)",
+      "PowerShell($body = @{ username = \"admin\"; password = \"admin123\"; roleCode = \"ADMIN\" } | ConvertTo-Json; try { $response = Invoke-RestMethod -Uri \"http://localhost:52333/api/auth/register\" -Method POST -Body $body -ContentType \"application/json\" -TimeoutSec 10; Write-Host \\($response | ConvertTo-Json\\) } catch { Write-Host \"StatusCode:\" $_.Exception.Response.StatusCode.value__; $reader = New-Object System.IO.StreamReader\\($_.Exception.Response.GetResponseStream\\(\\)\\); Write-Host \\($reader.ReadToEnd\\(\\)\\); $reader.Close\\(\\) })",
+      "PowerShell(curl.exe -s -X POST \"http://localhost:52333/api/auth/register\" -H \"Content-Type: application/json\" --data-raw \"{\\\\\"username\\\\\":\\\\\"admin\\\\\",\\\\\"password\\\\\":\\\\\"admin123\\\\\",\\\\\"roleCode\\\\\":\\\\\"ADMIN\\\\\"}\")",
+      "PowerShell(powershell -ExecutionPolicy Bypass -File \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\register-user.ps1\")",
+      "PowerShell(cmd /c '\"C:\\\\Program Files\\\\MySQL\\\\MySQL Server 8.0\\\\bin\\\\mysql.exe\" -u root -p123456 -D lng < \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\database\\\\init.sql\"' 2>&1)",
+      "PowerShell(powershell -ExecutionPolicy Bypass -File \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\test-login.ps1\")"
+    ]
+  }
+}

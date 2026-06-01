@@ -1,0 +1,1 @@
+dotnet run --project "E:\Desktop\lng接收站智能\LNG接收站智能启停系统\backend\LNGBackend.csproj"
