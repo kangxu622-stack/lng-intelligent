@@ -11,7 +11,12 @@
       <div class="question-row">
         <div class="question-info">
           <strong>[{{ q.questionType }}] {{ q.stem }}</strong>
-          <p>正确答案: {{ q.answer }} | 难度: {{ q.difficulty }} | 岗位: {{ q.position }}</p>
+          <div v-if="q.optionsJson" class="options-block">
+            <p v-for="(txt, key) in parseOptions(q.optionsJson)" :key="key" class="option-item">
+              {{ key }}: {{ txt }}
+            </p>
+          </div>
+          <p class="answer-line">正确答案: <span class="correct-answer">{{ q.answer }}</span> | 难度: {{ q.difficulty }} | 岗位: {{ q.position }}</p>
           <p v-if="q.explanation">解析: {{ q.explanation }}</p>
           <p>知识点: {{ q.knowledgeName }} | 手册依据: {{ q.manualBasis || '-' }}</p>
         </div>
@@ -46,6 +51,10 @@ const questions = ref<QuestionDto[]>([])
 const editVisible = ref(false)
 const editForm = ref<Record<string, string | null>>({})
 const editingId = ref('')
+
+const parseOptions = (json: string): Record<string, string> => {
+  try { return JSON.parse(json) } catch { return {} }
+}
 
 const refresh = async () => {
   const res = await getPendingQuestions()
@@ -85,6 +94,10 @@ onMounted(() => { refresh() })
 .question-info { flex: 1; color: #e0e6ff; }
 .question-info strong { color: #7bd7ff; }
 .question-info p { margin: 4px 0; font-size: 13px; }
+.options-block { margin: 6px 0; padding: 8px; border: 1px solid rgba(57,181,255,0.2); background: rgba(8,32,57,0.3); }
+.option-item { color: #b0c8e0; margin: 2px 0; font-size: 13px; }
+.answer-line { margin: 6px 0; }
+.correct-answer { color: #4caf50; font-weight: bold; }
 .question-actions { display: flex; gap: 6px; flex-shrink: 0; }
 .empty-msg { color: rgba(220,238,255,0.5); text-align: center; padding: 40px; }
 </style>

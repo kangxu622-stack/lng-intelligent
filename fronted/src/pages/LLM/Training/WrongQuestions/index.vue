@@ -35,7 +35,7 @@ const router = useRouter()
 const wrongQuestions = ref<WrongQuestionDto[]>([])
 
 const goToTraining = () => {
-  router.push('/ai-assistant/self-training')
+  router.push('/ai-assistant/training/self-training')
 }
 
 onMounted(async () => {

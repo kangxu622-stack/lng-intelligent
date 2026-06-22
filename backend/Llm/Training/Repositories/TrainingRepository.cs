@@ -95,7 +95,7 @@ public sealed class TrainingRepository : ITrainingRepository
 
     public TrainingRepository(IConfiguration configuration)
     {
-        _connectionString = configuration.GetConnectionString("MySQL")
+        _connectionString = configuration.GetConnectionString("DefaultConnection")
             ?? throw new InvalidOperationException("MySQL connection string is not configured.");
     }
 

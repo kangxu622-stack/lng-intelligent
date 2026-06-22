@@ -60,7 +60,7 @@ router.beforeEach((to, from, next) => {
   if (!token && !whiteList.includes(to.path)) {
     next('/login')
     return
-  } 
+  }
 
   next()
 })

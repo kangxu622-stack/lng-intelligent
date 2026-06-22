@@ -17,7 +17,9 @@
       "PowerShell(curl.exe -s -X POST \"http://localhost:52333/api/auth/register\" -H \"Content-Type: application/json\" --data-raw \"{\\\\\"username\\\\\":\\\\\"admin\\\\\",\\\\\"password\\\\\":\\\\\"admin123\\\\\",\\\\\"roleCode\\\\\":\\\\\"ADMIN\\\\\"}\")",
       "PowerShell(powershell -ExecutionPolicy Bypass -File \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\register-user.ps1\")",
       "PowerShell(cmd /c '\"C:\\\\Program Files\\\\MySQL\\\\MySQL Server 8.0\\\\bin\\\\mysql.exe\" -u root -p123456 -D lng < \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\database\\\\init.sql\"' 2>&1)",
-      "PowerShell(powershell -ExecutionPolicy Bypass -File \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\test-login.ps1\")"
+      "PowerShell(powershell -ExecutionPolicy Bypass -File \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\test-login.ps1\")",
+      "PowerShell(git add *)",
+      "PowerShell(git push *)"
     ]
   }
 }

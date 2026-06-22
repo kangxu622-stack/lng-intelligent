@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item *)",
+      "PowerShell(mysql *)",
+      "PowerShell($env:ASPNETCORE_URLS = \"http://0.0.0.0:52333\"; Start-Process -FilePath \"dotnet\" -ArgumentList \"run\", \"--project\", \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\backend\\\\LNGBackend.csproj\", \"--no-build\" -WindowStyle Hidden; Start-Sleep -Seconds 5; Write-Output \"Backend starting...\")",
+      "PowerShell(Start-Sleep -Seconds 5; try { $response = Invoke-WebRequest -Uri \"http://localhost:52333/api/training/system/config\" -UseBasicParsing -TimeoutSec 5; Write-Output $response.Content } catch { Write-Output \"Error: $_\" })",
+      "PowerShell(Start-Sleep -Seconds 8; try { $response = Invoke-WebRequest -Uri \"http://localhost:52333/api/training/system/config\" -UseBasicParsing -TimeoutSec 10; Write-Output $response.Content } catch { Write-Output \"StatusCode: $\\($_.Exception.Response.StatusCode.value__\\)\"; Write-Output \"Error: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(Get-Process *)",
+      "PowerShell(dotnet build *)",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(Start-Process -FilePath \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\backend\\\\bin\\\\Debug\\\\net8.0\\\\LNGBackend.exe\" -WorkingDirectory \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\backend\" -WindowStyle Hidden; Write-Host \"后端已启动\")",
+      "PowerShell(Start-Sleep -Seconds 3; Invoke-RestMethod -Uri \"http://localhost:52333/api/training/system/config\" -Method Get -ErrorAction SilentlyContinue | ConvertTo-Json)",
+      "PowerShell(Invoke-RestMethod -Uri \"http://localhost:52333/api/training/system/config\" -Method Get -ErrorAction SilentlyContinue | ConvertTo-Json)",
+      "PowerShell(Start-Process -FilePath \"dotnet\" -ArgumentList \"run --project `\"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\backend\\\\LNGBackend.csproj`\"\" -WorkingDirectory \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\backend\" -NoNewWindow -RedirectStandardOutput \"$env:TEMP\\\\backend_stdout.log\" -RedirectStandardError \"$env:TEMP\\\\backend_stderr.log\"; Write-Host \"启动完成，等待5秒...\")",
+      "PowerShell(Get-Content *)",
+      "PowerShell($response = Invoke-WebRequest -Uri \"http://localhost:52333/api/training/system/config\" -Method Get -ErrorAction Stop; $response.Content)",
+      "PowerShell(Start-Process -FilePath \"dotnet\" -ArgumentList \"run --project `\"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\backend\\\\LNGBackend.csproj`\"\" -WorkingDirectory \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\backend\" -NoNewWindow -RedirectStandardOutput \"$env:TEMP\\\\backend_stdout.log\" -RedirectStandardError \"$env:TEMP\\\\backend_stderr.log\"; Write-Host \"后端启动中，等待8秒...\")",
+      "PowerShell(Start-Sleep -Seconds 8; $response = Invoke-WebRequest -Uri \"http://localhost:52333/api/training/system/config\" -Method Get -ErrorAction Stop; $response.Content)",
+      "PowerShell(Out-File *)",
+      "PowerShell($parseResult = & curl.exe -s -X POST \"http://localhost:52333/api/training/manuals/b560742af9d5498b/parse?userId=admin\"; Write-Host \"=== 解析结果 ===\"; Write-Host $parseResult.Substring\\(0, [Math]::Min\\(300, $parseResult.Length\\)\\); Write-Host \"`n=== 切块 ===\"; $chunkResult = & curl.exe -s -X POST \"http://localhost:52333/api/training/manuals/b560742af9d5498b/chunk?userId=admin\"; Write-Host $chunkResult.Substring\\(0, [Math]::Min\\(500, $chunkResult.Length\\)\\))",
+      "PowerShell(Start-Process -FilePath \"npm\" -ArgumentList \"run dev\" -WorkingDirectory \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\fronted\" -NoNewWindow -RedirectStandardOutput \"$env:TEMP\\\\frontend_stdout.log\" -RedirectStandardError \"$env:TEMP\\\\frontend_stderr.log\"; Write-Host \"前端启动中，等待8秒...\")",
+      "PowerShell(Start-Process -FilePath \"cmd\" -ArgumentList \"/c npm run dev\" -WorkingDirectory \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\fronted\" -NoNewWindow -RedirectStandardOutput \"$env:TEMP\\\\frontend_stdout.log\" -RedirectStandardError \"$env:TEMP\\\\frontend_stderr.log\"; Write-Host \"前端启动中，等待10秒...\")",
+      "PowerShell(Get-ChildItem -Path \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\fronted\\\\src\" -Recurse -Depth 2 | Select-Object FullName, Mode | Where-Object { $_.Mode -match \"d\" } | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\backend\" -Recurse -Depth 2 | Select-Object FullName, Mode | Where-Object { $_.Mode -match \"d\" } | Format-Table -AutoSize)",
+      "PowerShell(Start-Process -FilePath \"dotnet\" -ArgumentList \"run --project `\"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\backend\\\\LNGBackend.csproj`\"\" -WorkingDirectory \"E:\\\\Desktop\\\\lng接收站智能\\\\LNG接收站智能启停系统\\\\backend\" -NoNewWindow -RedirectStandardOutput \"$env:TEMP\\\\backend_stdout.log\" -RedirectStandardError \"$env:TEMP\\\\backend_stderr.log\"; Write-Host \"后端启动中...\")"
+    ]
+  }
+}

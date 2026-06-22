@@ -165,7 +165,7 @@ export function uploadManual(file: File, userId: string = 'admin') {
   form.append('file', file)
   form.append('userId', userId)
   return http.post<ApiResponse<ManualDto>>('/api/training/manuals/upload', form, {
-    headers: { 'Content-Type': 'multipart/form-data' }
+    timeout: 120000
   })
 }
 
@@ -197,7 +197,7 @@ export function getKnowledgeChunks(manualId: string) {
 }
 
 export function extractKnowledge(chunkIds: string[], userId: string = 'admin') {
-  return http.post<ApiResponse<KnowledgeExtractResult>>('/api/training/knowledge/extract', { chunkIds, userId })
+  return http.post<ApiResponse<KnowledgeExtractResult>>('/api/training/knowledge/extract', { chunkIds, userId }, { timeout: 120000 })
 }
 
 export function getPendingKnowledge() {
@@ -225,7 +225,7 @@ export function generateQuestions(input: {
   position: string; questionType: string; difficulty: string; count: number
   chunkIds?: string[]; customText?: string; knowledgeId?: string; knowledgeName?: string; userId?: string
 }) {
-  return http.post<ApiResponse<QuestionGenerateResult>>('/api/training/questions/generate', input)
+  return http.post<ApiResponse<QuestionGenerateResult>>('/api/training/questions/generate', input, { timeout: 120000 })
 }
 
 export function getPendingQuestions() {
@@ -296,5 +296,5 @@ export function getAdminStats() {
 }
 
 export function analyzeWrongQuestions(userId: string) {
-  return http.post<ApiResponse<{ analysis: string }>>(`/api/training/analytics/wrong-analysis/${userId}`)
+  return http.post<ApiResponse<{ analysis: string }>>(`/api/training/analytics/wrong-analysis/${userId}`, null, { timeout: 120000 })
 }
